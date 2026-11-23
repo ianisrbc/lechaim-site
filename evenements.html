@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Événements · Lechaim</title>
+  <meta name="description" content="Dégustations, soirées et privatisations : les prochains rendez-vous Lechaim.">
+  <meta name="theme-color" content="#0B3DB8">
+  <link rel="canonical" href="https://lechaim-beer.com/evenements.html">
+  <meta property="og:title" content="Événements · Lechaim">
+  <meta property="og:description" content="Dégustations, soirées et privatisations : les prochains rendez-vous Lechaim.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lechaim-beer.com/evenements.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo:wght@500;700&family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Symboles réutilisables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Étoile de David au trait, ouverte en bas (comme sur l'étiquette) -->
+    <symbol id="star" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" style="stroke-width: var(--sw, 4)" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M50 8 L86 70 L14 70 Z"/>
+        <path d="M14 30 L86 30 L56 82 M44 82 L14 30"/>
+      </g>
+    </symbol>
+    <!-- Vagues épaisses de la planche (couleur = currentColor) -->
+    <symbol id="ribbons" viewBox="0 0 600 500" preserveAspectRatio="xMaxYMid slice" style="overflow:visible">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <path d="M640 30 C 500 50, 540 190, 400 225 S 250 400, 150 540" stroke-width="74"/>
+        <path d="M660 300 C 570 300, 560 420, 460 540" stroke-width="52"/>
+      </g>
+    </symbol>
+    <!-- Rayons en éventail -->
+    <symbol id="rays" viewBox="0 0 100 56">
+      <g stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none">
+        <line x1="50" y1="40" x2="50" y2="4"/>
+        <line x1="40" y1="42" x2="30" y2="8"/><line x1="60" y1="42" x2="70" y2="8"/>
+        <line x1="31" y1="47" x2="12" y2="20"/><line x1="69" y1="47" x2="88" y2="20"/>
+        <line x1="26" y1="54" x2="2" y2="40"/><line x1="74" y1="54" x2="98" y2="40"/>
+      </g>
+    </symbol>
+
+    <!-- Icônes au trait -->
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18M11 12v2h2v-2"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 12h24v22H4zM28 19h9l7 8v7H28z"/><circle cx="13" cy="36" r="4" fill="var(--icon-bg, #0B3DB8)"/><circle cx="36" cy="36" r="4" fill="var(--icon-bg, #0B3DB8)"/><path d="M31 22h5l4 5h-9z"/></g></symbol>
+    <symbol id="i-keg" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M11 8h26c2 5 3 11 3 16s-1 11-3 16H11c-2-5-3-11-3-16s1-11 3-16z"/><path d="M9 16h30M8 24h32M9 32h30"/><rect x="20" y="4" width="8" height="4" rx="1"/></g></symbol>
+    <symbol id="i-cheers" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><g transform="rotate(-16 15 28)"><path d="M8 14h14l-1.5 28h-11z"/><path d="M8.6 21h12.8"/></g><g transform="rotate(16 33 28)"><path d="M26 14h14l-1.5 28h-11z"/><path d="M26.6 21h12.8"/></g><path d="M24 3v5M18 5l2.5 4M30 5l-2.5 4"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="9" width="36" height="33" rx="3"/><path d="M6 18h36M15 5v8M33 5v8"/></g></symbol>
+    <symbol id="i-handshake" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 16l8-4 6 2M46 16l-8-4-10 3-8 6c-2 2 0 5 3 4l6-4"/><path d="M10 12l-6 16 4 3M38 12l6 16-4 3"/><path d="M8 31l4 4c1 1 3 1 4 0M14 33l4 4c1 1 3 1 4 0M20 36l3 3c1 1 3 1 4 0l13-8M24 31l4 4"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 22 28"><path d="M11 0C5 0 0 5 0 11c0 8 11 17 11 17s11-9 11-17C22 5 17 0 11 0z" fill="currentColor"/><circle cx="11" cy="11" r="4" fill="#efe3cc"/></symbol>
+  </svg>
+
+  <!-- Contrôle d'âge (exigé pour un site de boisson alcoolisée) -->
+  <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-title" hidden>
+    <div class="age-gate__card">
+      <svg class="age-gate__star" aria-hidden="true"><use href="#star"/></svg>
+      <p class="age-gate__logo">LECHAIM</p>
+      <h2 id="age-title">Avez-vous 18 ans ou plus ?</h2>
+      <p>Ce site présente des boissons alcoolisées. Son accès est réservé aux personnes majeures.</p>
+      <div class="age-gate__actions">
+        <button class="btn btn--blue" id="age-yes">Oui, j'ai 18 ans ou plus</button>
+        <a class="btn btn--ghost" href="https://www.alcool-info-service.fr/">Non</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="./" aria-label="Lechaim, accueil">
+        <span class="logo__name">LECHAIM</span>
+        <span class="logo__he" lang="he" dir="rtl">לחיים</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav">
+        <span class="sr-only">Menu</span><span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="bieres.html">Nos bières</a>
+        <a href="histoire.html">Notre histoire</a>
+        <a href="evenements.html" aria-current="page">Événements</a>
+        <a href="trouver.html">Où nous trouver</a>
+        <a class="btn btn--blue btn--sm btn--pro" href="pros.html">Devenir professionnel <svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <svg class="page-head__wave" viewBox="0 0 600 300" preserveAspectRatio="xMaxYMin meet" aria-hidden="true">
+        <path d="M600 0 V190 C 540 240, 470 170, 400 210 C 330 250, 300 300, 210 290 C 300 240, 300 170, 380 120 C 460 70, 480 30, 470 0 Z" fill="#0B3DB8"/>
+      </svg>
+      <div class="container page-head__inner">
+        <h1 class="title-xl page-head__title">Événements</h1>
+        <p class="page-head__lead">Dégustations, collaborations, soirées… Retrouvez ici tous nos prochains rendez-vous.</p>
+      </div>
+    </section>
+
+    <section class="section section--flush-top">
+      <div class="container">
+        <!-- PLACEHOLDER : remplacer par les vrais événements (date, titre, lieu, description, lien) -->
+        <div class="events">
+          <article class="event" data-placeholder>
+            <div class="event__visual">
+              <img src="assets/img/visuels/terrasse.jpg" alt="" width="800" height="560" loading="lazy">
+              <p class="event__date"><span><span class="ph" data-placeholder>Jour</span></span><strong><span class="ph" data-placeholder>00</span></strong><span><span class="ph" data-placeholder>Mois</span></span></p>
+            </div>
+            <div class="event__body">
+              <p class="event__kind">Dégustation</p>
+              <h2 class="event__title"><span class="ph" data-placeholder>Titre de l'événement</span></h2>
+              <p class="event__place"><span class="ph" data-placeholder>Lieu · horaires</span></p>
+              <p><span class="ph" data-placeholder>Description courte.</span></p>
+              <a class="tile__go event__go" href="#" aria-label="Détails de l'événement"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="event" data-placeholder>
+            <div class="event__visual">
+              <img src="assets/img/visuels/hero-verres.jpg" alt="" width="800" height="560" loading="lazy">
+              <p class="event__date"><span><span class="ph" data-placeholder>Jour</span></span><strong><span class="ph" data-placeholder>00</span></strong><span><span class="ph" data-placeholder>Mois</span></span></p>
+            </div>
+            <div class="event__body">
+              <p class="event__kind">Soirée</p>
+              <h2 class="event__title"><span class="ph" data-placeholder>Titre de l'événement</span></h2>
+              <p class="event__place"><span class="ph" data-placeholder>Lieu · horaires</span></p>
+              <p><span class="ph" data-placeholder>Description courte.</span></p>
+              <a class="tile__go event__go" href="#" aria-label="Détails de l'événement"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="event" data-placeholder>
+            <div class="event__visual">
+              <img src="assets/img/visuels/amis-trinquent.jpg" alt="" width="800" height="560" loading="lazy">
+              <p class="event__date"><span><span class="ph" data-placeholder>Jour</span></span><strong><span class="ph" data-placeholder>00</span></strong><span><span class="ph" data-placeholder>Mois</span></span></p>
+            </div>
+            <div class="event__body">
+              <p class="event__kind">Rencontre</p>
+              <h2 class="event__title"><span class="ph" data-placeholder>Titre de l'événement</span></h2>
+              <p class="event__place"><span class="ph" data-placeholder>Lieu · horaires</span></p>
+              <p><span class="ph" data-placeholder>Description courte.</span></p>
+              <a class="tile__go event__go" href="#" aria-label="Détails de l'événement"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section find">
+      <div class="container find__inner">
+        <div>
+          <p class="eyebrow eyebrow--gold">Professionnels</p>
+          <h2>Organiser un événement avec Lechaim</h2>
+          <p>Soirée dans votre établissement, lancement, événement d'entreprise ou privatisation : nous pouvons vous accompagner, avec nos bières en fûts de 30 L ou en bouteilles de 33 cl.</p>
+          <a class="btn btn--cream btn--arrow" href="pros.html">Devenir professionnel</a>
+        </div>
+        <div class="find__card">
+          <p class="find__name">Formats</p>
+          <p>Fûts de 30 L<br>Bouteilles de 33 cl</p>
+          <p class="find__web">Pale Ale – Blonde · 4,2 % vol.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="logo__name">LECHAIM</span>
+        <span class="logo__he" lang="he" dir="rtl">לחיים</span>
+      </div>
+      <nav class="site-footer__nav" aria-label="Pied de page">
+        <a href="bieres.html">Nos bières</a>
+        <a href="histoire.html">Notre histoire</a>
+        <a href="evenements.html">Événements</a>
+        <a href="trouver.html">Où nous trouver</a>
+        <a href="pros.html">Devenir professionnel</a>
+        <!-- PLACEHOLDER : compte Instagram de la maquette, à confirmer -->
+        <a href="https://www.instagram.com/lechaim_beer/" rel="noopener">Instagram</a>
+      </nav>
+      <p class="site-footer__legal">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+      <p class="site-footer__small">© <span id="year">2026</span> Lechaim · Saint-Maur-des-Fossés · <a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
