@@ -82,71 +82,30 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <svg class="hero__ribbons" aria-hidden="true"><use href="#ribbons"/></svg>
+    <!-- HERO (maquette de la planche) -->
+    <section class="hero hero--photo">
+      <!-- PLACEHOLDER : visuel extrait de la planche d'identité, basse définition. À remplacer par une vraie photo (verres Lechaim qui trinquent). -->
+      <img class="hero__photo" src="assets/img/provisoire/hero-verres.jpg" alt="Deux verres de bière Lechaim qui trinquent" width="891" height="699" data-placeholder>
       <div class="container hero__inner">
         <div class="hero__text">
-          <p class="eyebrow eyebrow--gold">Bière craft · Saint-Maur-des-Fossés</p>
           <h1>Des bières pour les bons moments</h1>
           <span class="rule" aria-hidden="true"></span>
           <p class="hero__lead">Des bières craft modernes, fraîches et pleines de caractère.</p>
           <p class="hero__toast"><span lang="he" dir="rtl">לחיים</span> — À la vie !</p>
           <a class="btn btn--cream btn--arrow" href="bieres.html">Découvrir nos bières</a>
         </div>
-        <div class="hero__visual" aria-hidden="true">
-          <svg class="hero__star"><use href="#star"/></svg>
-          <svg viewBox="0 0 400 400" class="hero__glasses">
-            <g transform="translate(200 18) scale(1.3) translate(-50 0)" style="color:#C3A15A"><use href="#rays" width="100" height="56"/></g>
-            <!-- verre gauche -->
-            <g transform="rotate(-14 150 250)">
-              <path d="M95 130 L205 130 L192 350 Q150 362 108 350 Z" fill="#E9B949"/>
-              <path d="M95 130 L205 130 L203 160 L97 160 Z" fill="#F6F1E6"/>
-              <path d="M92 132 Q100 108 125 116 Q140 96 162 112 Q185 100 196 118 Q214 116 208 134 Z" fill="#F6F1E6"/>
-              <path d="M95 130 L205 130 L192 350 Q150 362 108 350 Z" fill="none" stroke="#F6F1E6" stroke-width="5" stroke-linejoin="round"/>
-              <text x="150" y="250" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="27" fill="#F6F1E6" letter-spacing="1">LECHAIM</text>
-              <text x="150" y="268" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="12" fill="#F6F1E6">לחיים</text>
-              <circle cx="130" cy="300" r="4" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="165" cy="320" r="3" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="140" cy="190" r="2.5" fill="#F6F1E6" opacity=".7"/>
-            </g>
-            <!-- verre droit -->
-            <g transform="rotate(14 250 250)">
-              <path d="M195 130 L305 130 L292 350 Q250 362 208 350 Z" fill="#E9B949"/>
-              <path d="M195 130 L305 130 L303 160 L197 160 Z" fill="#F6F1E6"/>
-              <path d="M192 132 Q200 110 224 116 Q242 98 262 112 Q286 102 296 120 Q312 118 308 134 Z" fill="#F6F1E6"/>
-              <path d="M195 130 L305 130 L292 350 Q250 362 208 350 Z" fill="none" stroke="#F6F1E6" stroke-width="5" stroke-linejoin="round"/>
-              <text x="250" y="250" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="27" fill="#F6F1E6" letter-spacing="1">LECHAIM</text>
-              <text x="250" y="268" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="12" fill="#F6F1E6">לחיים</text>
-              <circle cx="240" cy="310" r="4" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="268" cy="200" r="3" fill="#F6F1E6" opacity=".7"/>
-            </g>
-            <!-- éclaboussures -->
-            <g fill="#F6F1E6"><circle cx="200" cy="104" r="5"/><circle cx="214" cy="88" r="3.5"/><circle cx="186" cy="84" r="3"/><circle cx="226" cy="100" r="2.5"/></g>
-          </svg>
-        </div>
       </div>
-      <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 60 C 240 120, 480 0, 720 50 S 1200 110, 1440 40 L1440 120 L0 120 Z" fill="#F6F1E6"/>
-      </svg>
     </section>
 
-    <!-- NOS BIÈRES -->
-    <section class="section beers" id="bieres">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">La gamme</p>
-          <h2>Nos bières</h2>
-        </div>
-
-        <div class="carousel" data-carousel>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Bière précédente" data-prev>‹</button>
-          <div class="carousel__track" data-track>
-
-            <!-- Bière de référence, confirmée -->
-            <article class="beer-card beer-card--featured">
-              <div class="beer-card__visual">
-                <!-- Bouteille redessinée en vectoriel d'après l'étiquette définitive (face centrale). À remplacer par une photo de la vraie bouteille. -->
+    <!-- NOS BIÈRES + NOTRE HISTOIRE, côte à côte comme sur la maquette -->
+    <section class="duo">
+      <div class="container duo__inner">
+        <div class="duo__beers" id="bieres">
+          <h2 class="duo__title">Nos bières</h2>
+          <div class="shelf" data-carousel>
+            <button class="carousel__btn carousel__btn--prev" aria-label="Bière précédente" data-prev>‹</button>
+            <div class="shelf__track" data-track>
+              <a class="shelf__item" href="bieres.html">
                 <svg class="bottle" viewBox="0 0 160 420" role="img" aria-label="Bouteille Lechaim Pale Ale – Blonde, 33 cl">
                   <defs>
                     <linearGradient id="glass" x1="0" x2="1">
@@ -167,101 +126,48 @@
                   <text x="26" y="341" font-family="Montserrat, sans-serif" font-weight="700" font-size="5.5" fill="#F6F1E6">4,2% ALC/VOL</text>
                   <text x="134" y="341" text-anchor="end" font-family="Montserrat, sans-serif" font-weight="700" font-size="5.5" fill="#F6F1E6">33CL</text>
                 </svg>
+                <span class="shelf__name">Pale Ale – Blonde</span>
+                <span class="shelf__meta">4,2 % vol. · 33 cl</span>
+              </a>
+              <!-- PLACEHOLDER : références à venir (Blonde et IPA de la planche non confirmées) -->
+              <div class="shelf__item" data-placeholder>
+                <svg class="bottle bottle--soon" viewBox="0 0 160 420" role="img" aria-label="Bouteille à venir">
+                  <rect x="60" y="4" width="40" height="16" rx="3" fill="#C3A15A" opacity=".6"/>
+                  <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="#cdbfa6"/>
+                  <rect x="20" y="214" width="120" height="132" fill="#F6F1E6"/>
+                  <use href="#star" x="86" y="226" width="26" height="26" style="color:#C3A15A"/>
+                  <text x="80" y="284" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="40" fill="#0B3DB8" opacity=".45" letter-spacing="1">LECHAIM</text>
+                  <rect x="20" y="314" width="120" height="32" fill="#E2D8C8"/>
+                  <text x="80" y="335" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#0F1C2E" opacity=".6" letter-spacing="1.5">À VENIR</text>
+                </svg>
+                <span class="shelf__name">Prochainement</span>
+                <span class="shelf__meta">Nouvelle recette</span>
               </div>
-              <div class="beer-card__body">
-                <p class="beer-card__style">Pale Ale – Blonde</p>
-                <h3>Lechaim Pale Ale</h3>
-                <p class="beer-card__meta"><span>4,2 % vol.</span><span>33 cl</span></p>
-                <p>Une bière rafraîchissante pour les premières fois, les grandes retrouvailles et les verres qui se lèvent ensemble.</p>
-                <p class="beer-card__he" lang="he" dir="rtl">בירה מרעננת לחוויות ראשונות, למפגשים מרגשים ולכוסות המורמות יחד.</p>
-                <dl class="beer-card__facts">
-                  <dt>Ingrédients</dt>
-                  <dd>Eau, <strong>orge</strong>, <strong>blé</strong>, houblons, levure, CO₂</dd>
-                </dl>
-                <p><a class="link-arrow" href="bieres.html">Voir la fiche</a></p>
+              <div class="shelf__item" data-placeholder>
+                <svg class="bottle bottle--soon" viewBox="0 0 160 420" role="img" aria-label="Bouteille à venir">
+                  <rect x="60" y="4" width="40" height="16" rx="3" fill="#C3A15A" opacity=".6"/>
+                  <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="#cdbfa6"/>
+                  <rect x="20" y="214" width="120" height="132" fill="#F6F1E6"/>
+                  <use href="#star" x="86" y="226" width="26" height="26" style="color:#C3A15A"/>
+                  <text x="80" y="284" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="40" fill="#0B3DB8" opacity=".45" letter-spacing="1">LECHAIM</text>
+                  <rect x="20" y="314" width="120" height="32" fill="#E2D8C8"/>
+                  <text x="80" y="335" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#0F1C2E" opacity=".6" letter-spacing="1.5">À VENIR</text>
+                </svg>
+                <span class="shelf__name">Prochainement</span>
+                <span class="shelf__meta">Édition à venir</span>
               </div>
-            </article>
-
-            <!-- PLACEHOLDER : références Blonde et IPA non confirmées (concepts de la planche). À retirer ou compléter. -->
-            <article class="beer-card beer-card--soon" data-placeholder>
-              <div class="beer-card__visual beer-card__visual--soon">
-                <svg aria-hidden="true"><use href="#star"/></svg>
-              </div>
-              <div class="beer-card__body">
-                <p class="beer-card__style">Prochainement</p>
-                <h3>Nouvelle recette</h3>
-                <p>D'autres bières sont en préparation. Elles seront annoncées dans les actus.</p>
-              </div>
-            </article>
-
-            <article class="beer-card beer-card--soon" data-placeholder>
-              <div class="beer-card__visual beer-card__visual--soon beer-card__visual--waves">
-                <svg aria-hidden="true"><use href="#star"/></svg>
-              </div>
-              <div class="beer-card__body">
-                <p class="beer-card__style">Prochainement</p>
-                <h3>Édition à venir</h3>
-                <p>Une prochaine bière Lechaim rejoindra la Pale Ale.</p>
-              </div>
-            </article>
-
+            </div>
+            <button class="carousel__btn carousel__btn--next" aria-label="Bière suivante" data-next>›</button>
           </div>
-          <button class="carousel__btn carousel__btn--next" aria-label="Bière suivante" data-next>›</button>
         </div>
-      </div>
-    </section>
-
-    <!-- NOTRE HISTOIRE -->
-    <section class="section story" id="histoire">
-      <div class="container story__inner">
-        <div class="story__illu" aria-hidden="true">
-          <svg viewBox="0 0 400 420">
-            <defs>
-              <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.6" fill="#0B3DB8"/></pattern>
-              <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
-              <mask id="fade-m"><rect width="400" height="420" fill="url(#fade)"/></mask>
-              <clipPath id="frame"><rect width="400" height="420" rx="0"/></clipPath>
-            </defs>
-            <g clip-path="url(#frame)">
-              <path d="M40 420 A160 160 0 0 1 360 420 Z" fill="url(#dots)" mask="url(#fade-m)"/>
-              <g transform="translate(200 20) scale(1.5) translate(-50 0)" style="color:#C3A15A"><use href="#rays" width="100" height="56"/></g>
-            <g transform="translate(186 118) rotate(24)">
-              <rect x="-11" y="-12" width="22" height="13" rx="3" fill="#C3A15A"/>
-              <path d="M-9 0 H9 V45 C9 62 26 66 26 90 V300 H-26 V90 C-26 66 -9 62 -9 45 Z" fill="#0B3DB8"/>
-              <path d="M-3 8 V44 C-3 60 -16 70 -18 92 V290" stroke="#F6F1E6" stroke-opacity=".35" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <rect x="-26" y="118" width="52" height="46" fill="#F6F1E6"/>
-              <text x="0" y="146" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="15" fill="#0B3DB8">LECHAIM</text>
-              <rect x="-26" y="152" width="52" height="12" fill="#3d67d6"/>
-              <rect x="-34" y="190" width="68" height="64" rx="28" fill="#3d67d6"/>
-              <path d="M-20 204 H20 M-20 222 H20 M-20 240 H20" stroke="#0B3DB8" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
-              <rect x="-30" y="236" width="60" height="200" rx="22" fill="#3d67d6"/>
-            </g>
-            <g transform="translate(214 118) rotate(-24)">
-              <rect x="-11" y="-12" width="22" height="13" rx="3" fill="#C3A15A"/>
-              <path d="M-9 0 H9 V45 C9 62 26 66 26 90 V300 H-26 V90 C-26 66 -9 62 -9 45 Z" fill="#0B3DB8"/>
-              <path d="M-3 8 V44 C-3 60 -16 70 -18 92 V290" stroke="#F6F1E6" stroke-opacity=".35" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <rect x="-26" y="118" width="52" height="46" fill="#F6F1E6"/>
-              <text x="0" y="146" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="15" fill="#0B3DB8">LECHAIM</text>
-              <rect x="-26" y="152" width="52" height="12" fill="#3d67d6"/>
-              <rect x="-34" y="190" width="68" height="64" rx="28" fill="#3d67d6"/>
-              <path d="M-20 204 H20 M-20 222 H20 M-20 240 H20" stroke="#0B3DB8" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
-              <rect x="-30" y="236" width="60" height="200" rx="22" fill="#3d67d6"/>
-            </g>
-              <g fill="#C3A15A"><circle cx="200" cy="104" r="4"/><circle cx="188" cy="90" r="2.5"/><circle cx="213" cy="92" r="3"/></g>
-            </g>
-          </svg>
-        </div>
-        <div class="story__text">
-          <p class="eyebrow">Notre histoire</p>
-          <h2>Un nom qui se dit en levant son verre</h2>
-          <p><span lang="he" dir="rtl" class="he-inline">לחיים</span>, <em>lechaim</em>, c'est le toast que l'on porte autour d'une table juive : « À la vie ! ». Un mot simple, que l'on prononce pour une naissance, un mariage ou des retrouvailles.</p>
-          <p>Lechaim est née à Saint-Maur-des-Fossés de l'envie de faire une bière qui porte cette culture avec fierté et sans folklore. Une bière de partage, faite pour les moments où l'on se retrouve.</p>
-          <ul class="story__values">
-            <li><strong>Culture</strong> Une identité juive, contemporaine et assumée.</li>
-            <li><strong>Partage</strong> Une bière pensée pour la table et pour les autres.</li>
-            <li><strong>Retrouvailles</strong> Les premières fois, les grandes retrouvailles, les verres qui se lèvent ensemble.</li>
-          </ul>
-          <a class="link-arrow" href="histoire.html">En savoir plus</a>
+        <div class="duo__story" id="histoire">
+          <div class="duo__story-text">
+            <h2 class="duo__title">Notre histoire</h2>
+            <p><strong>Lechaim</strong>, c'est une bière craft inspirée par la culture du partage et le plaisir de se retrouver. Son nom reprend le toast hébreu <span lang="he" dir="rtl" class="he-inline">לחיים</span>, « À la vie ! ». Une identité juive, entre tradition et modernité.</p>
+            <a class="link-arrow" href="histoire.html">En savoir plus</a>
+          </div>
+          <!-- PLACEHOLDER : illustration extraite de la planche, très basse définition. À remplacer. -->
+          <img class="duo__illu" src="assets/img/provisoire/histoire-illustration.jpg" alt="" width="273" height="357" data-placeholder>
         </div>
       </div>
     </section>

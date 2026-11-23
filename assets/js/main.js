@@ -35,7 +35,7 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
   const track = carousel.querySelector('[data-track]');
   const prev = carousel.querySelector('[data-prev]');
   const next = carousel.querySelector('[data-next]');
-  const step = () => (track.querySelector('.beer-card')?.offsetWidth || 320) + 24;
+  const step = () => (track.firstElementChild?.offsetWidth || 320) + 24;
   const update = () => {
     prev.disabled = track.scrollLeft <= 4;
     next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;

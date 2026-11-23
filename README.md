@@ -23,6 +23,8 @@ Ouvrir `index.html` dans un navigateur, ou lancer `python3 -m http.server` dans 
 - Nom d'Ianis et lien Rupture Brewing sur « Notre histoire » (à valider)
 - Points de vente, articles d'actus « Exemple d'article »
 - Cible du bouton « Acheter » (mène à trouver.html#acheter)
+- `assets/img/provisoire/` : photo des verres et illustration « Notre histoire » extraites de la planche (basse définition ; l’hébreu des verres y est écrit לחים au lieu de לחיים). À remplacer par de vrais visuels.
+- Bouteilles « À venir » sur l’accueil
 - Cartes « Prochainement » dans Nos bières (Blonde et IPA non confirmées)
 - Cartes Actus
 - Adresse e-mail contact@lechaim-beer.com
