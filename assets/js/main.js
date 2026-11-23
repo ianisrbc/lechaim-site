@@ -88,3 +88,18 @@ document.querySelectorAll('[data-pos-search]').forEach(input => {
     if (empty) empty.hidden = shown > 0;
   });
 });
+
+// Formulaire « Demander nos tarifs pro » : ouvre la messagerie avec la demande pré-remplie
+document.querySelectorAll('[data-pro-form]').forEach(form => {
+  const err = form.querySelector('.pro-form__error');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(form));
+    const ok = d.nom.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email.trim());
+    err.hidden = !!ok;
+    if (!ok) return;
+    const body = `Nom / établissement : ${d.nom}\nE-mail : ${d.email}\nVille : ${d.ville}\n\n${d.message}`;
+    // PLACEHOLDER : adresse de réception à confirmer
+    location.href = 'mailto:contact@lechaim-beer.com?subject=' + encodeURIComponent('Demande de tarifs pro – ' + d.nom) + '&body=' + encodeURIComponent(body);
+  });
+});

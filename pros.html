@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Devenir professionnel · Lechaim</title>
-  <meta name="description" content="Bars, restaurants, cavistes, hôtels, entreprises : proposez Lechaim à vos clients. Fûts 30 L et bouteilles 33 cl, livraison, accompagnement.">
+  <meta name="description" content="Bars, restaurants, cavistes, organisateurs d'événements : proposez Lechaim à vos clients. Fûts 30 L et bouteilles 33 cl, livraison, accompagnement. Demandez nos tarifs pro.">
   <meta name="theme-color" content="#0B3DB8">
   <link rel="canonical" href="https://lechaim-beer.com/pros.html">
   <meta property="og:title" content="Devenir professionnel · Lechaim">
-  <meta property="og:description" content="Bars, restaurants, cavistes, hôtels, entreprises : proposez Lechaim à vos clients. Fûts 30 L et bouteilles 33 cl, livraison, accompagnement.">
+  <meta property="og:description" content="Bars, restaurants, cavistes, organisateurs d'événements : proposez Lechaim à vos clients. Fûts 30 L et bouteilles 33 cl, livraison, accompagnement. Demandez nos tarifs pro.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lechaim-beer.com/pros.html">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -90,48 +90,32 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <svg class="hero__ribbons hero__ribbons--page" aria-hidden="true"><use href="#ribbons"/></svg>
-      <svg class="page-hero__star" aria-hidden="true"><use href="#star"/></svg>
-      <div class="container page-hero__inner">
-        <p class="eyebrow eyebrow--gold">Professionnels</p>
-        <h1>Une offre pensée pour les pros</h1>
-        <span class="rule" aria-hidden="true"></span>
-        <p class="page-hero__lead">Bars, restaurants, cavistes, hôtels, entreprises… Travaillons ensemble pour faire découvrir Lechaim à vos clients.</p>
-      </div>
-      <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 60 C 240 120, 480 0, 720 50 S 1200 110, 1440 40 L1440 120 L0 120 Z" fill="#F6F1E6"/>
+    <section class="page-head page-head--pro">
+      <svg class="page-head__wave" viewBox="0 0 600 300" preserveAspectRatio="xMaxYMin meet" aria-hidden="true">
+        <path d="M600 0 V190 C 540 240, 470 170, 400 210 C 330 250, 300 300, 210 290 C 300 240, 300 170, 380 120 C 460 70, 480 30, 470 0 Z" fill="#0B3DB8"/>
       </svg>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Notre offre</p>
-          <h2>Ce que nous proposons</h2>
+      <div class="container pro-head">
+        <div class="pro-head__intro">
+          <h1 class="title-xl page-head__title">Travailler avec Lechaim</h1>
+          <p class="page-head__lead">Vous êtes un bar, un restaurant, un caviste ou un organisateur d'événements ?</p>
+          <p>Parlons de votre projet. Nous proposons une offre adaptée, une livraison rapide et un accompagnement sur mesure.</p>
         </div>
-        <div class="tips">
-          <article class="tip">
-            <img class="tip__icon" src="assets/img/visuels/picto-livraison.png" alt="">
-            <h3>Livraison rapide</h3>
-            <p>Nous livrons directement votre établissement. <span class="ph" data-placeholder>Zone et délais de livraison à préciser.</span></p>
-          </article>
-          <article class="tip">
-            <img class="tip__icon" src="assets/img/visuels/picto-futs.png" alt="">
-            <h3>Fûts 30 L &amp; bouteilles 33 cl</h3>
-            <p>La Pale Ale – Blonde à 4,2 % vol. existe en fût de 30 L pour la pression et en bouteille de 33 cl.</p>
-          </article>
-          <article class="tip">
-            <img class="tip__icon" src="assets/img/visuels/picto-accompagnement.png" alt="">
-            <h3>Accompagnement sur mesure</h3>
-            <p>Nous vous aidons à présenter Lechaim à vos clients : conseils de service, accords et supports à la marque. <span class="ph" data-placeholder>Détail de l'accompagnement à préciser.</span></p>
-          </article>
-          <article class="tip">
-            <img class="tip__icon" src="assets/img/visuels/picto-evenements.png" alt="">
-            <h3>Événements &amp; privatisations</h3>
-            <p>Dégustations, soirées, événements d'entreprise : nous pouvons organiser un moment Lechaim avec vous.</p>
-          </article>
-        </div>
+        <ul class="pro-offer">
+          <li><img src="assets/img/visuels/picto-livraison.png" alt=""><div><strong>Livraison rapide</strong><span><span class="ph" data-placeholder>Zone et délais à préciser</span></span></div></li>
+          <li><img src="assets/img/visuels/picto-futs.png" alt=""><div><strong>Fûts 30 L</strong><span>Pale Ale – Blonde à la pression</span></div></li>
+          <li><img src="assets/img/visuels/picto-futs.png" alt="" class="pro-offer__alt"><div><strong>Bouteilles 33 cl</strong><span>Pale Ale – Blonde, 4,2 % vol.</span></div></li>
+          <li><img src="assets/img/visuels/picto-evenements.png" alt=""><div><strong>Offre événementielle</strong><span>Fûts, conseil et accompagnement <span class="ph" data-placeholder>matériel à préciser</span></span></div></li>
+        </ul>
+        <form class="pro-form" id="contact" data-pro-form novalidate>
+          <h2 class="pro-form__title">Demander nos tarifs pro</h2>
+          <label><span>Nom / établissement *</span><input name="nom" required autocomplete="organization"></label>
+          <label><span>E-mail *</span><input name="email" type="email" required autocomplete="email"></label>
+          <label><span>Ville</span><input name="ville" autocomplete="address-level2"></label>
+          <label><span>Votre message</span><textarea name="message" rows="4" placeholder="Type d'établissement, formats souhaités, volumes…"></textarea></label>
+          <button class="btn btn--blue btn--arrow" type="submit">Nous contacter</button>
+          <p class="pro-form__note">Le bouton ouvre votre messagerie avec votre demande prête à envoyer. <span class="ph" data-placeholder>Adresse de réception à confirmer : contact@lechaim-beer.com</span></p>
+          <p class="pro-form__error" role="alert" hidden>Merci d'indiquer votre nom ou établissement et une adresse e-mail valide.</p>
+        </form>
       </div>
     </section>
 
@@ -162,22 +146,6 @@
       </div>
     </section>
 
-    <section class="section find" id="contact">
-      <div class="container find__inner">
-        <div>
-          <p class="eyebrow eyebrow--gold">Devenir partenaire</p>
-          <h2>Parlons de votre établissement</h2>
-          <p>Écrivez-nous en indiquant le nom de votre établissement, sa ville, son type (bar, restaurant, cave…) et les formats qui vous intéressent. Nous revenons vers vous avec les conditions et les disponibilités.</p>
-          <!-- PLACEHOLDER : adresse e-mail pro à confirmer -->
-          <a class="btn btn--cream btn--arrow" href="mailto:contact@lechaim-beer.com?subject=Devenir%20partenaire%20Lechaim">Devenir partenaire</a>
-        </div>
-        <address class="find__card">
-          <p class="find__name">LECHAIM</p>
-          <p>5 boulevard de Créteil<br>94100 Saint-Maur-des-Fossés<br>France</p>
-          <p class="find__web"><span class="ph" data-placeholder>contact@lechaim-beer.com [à confirmer]</span></p>
-        </address>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">

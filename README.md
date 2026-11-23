@@ -10,9 +10,10 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 - `index.html` : accueil (maquette finale d'Ianis) : hero, Nos bières, Notre histoire, offre pros, Où nous trouver
 - `bieres.html` : fiche Pale Ale – Blonde (4,2 %, 33 cl et fût 30 L), ingrédients bilingues, étiquette, service ; IPA bientôt disponible
 - `histoire.html` : sens de לחיים, le projet, les valeurs, l'identité, article « De l'étiquette à la bouteille »
-- `evenements.html` : agenda (provisoire) et événements pour les pros
-- `pros.html` : offre professionnelle (livraison, fûts 30 L et bouteilles 33 cl, accompagnement, événements)
-- `trouver.html` : points de vente (provisoires), contact, adresse
+- `evenements.html` : cartes datées (provisoires) et événements pour les pros
+- `pros.html` : offre professionnelle et formulaire « Demander nos tarifs pro » (ouvre la messagerie, pas de serveur)
+- `trouver.html` : carte et liste des points de vente avec recherche (provisoire), contact, adresse
+- `bieres.html` a des filtres (Toutes, Disponibles, Bientôt, Formats pros)
 - `mentions-legales.html` : modèle à compléter
 - En-tête et pied de page sont dupliqués dans chaque page.
 
