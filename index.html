@@ -23,9 +23,25 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <!-- Étoile de David au trait, ouverte en bas (comme sur l'étiquette) -->
     <symbol id="star" viewBox="0 0 100 100">
-      <g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+      <g fill="none" stroke="currentColor" style="stroke-width: var(--sw, 4)" stroke-linejoin="round" stroke-linecap="round">
         <path d="M50 8 L86 70 L14 70 Z"/>
         <path d="M14 30 L86 30 L56 82 M44 82 L14 30"/>
+      </g>
+    </symbol>
+    <!-- Vagues épaisses de la planche (couleur = currentColor) -->
+    <symbol id="ribbons" viewBox="0 0 600 500" preserveAspectRatio="xMaxYMid slice" style="overflow:visible">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <path d="M640 30 C 500 50, 540 190, 400 225 S 250 400, 150 540" stroke-width="74"/>
+        <path d="M660 300 C 570 300, 560 420, 460 540" stroke-width="52"/>
+      </g>
+    </symbol>
+    <!-- Rayons en éventail -->
+    <symbol id="rays" viewBox="0 0 100 56">
+      <g stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none">
+        <line x1="50" y1="40" x2="50" y2="4"/>
+        <line x1="40" y1="42" x2="30" y2="8"/><line x1="60" y1="42" x2="70" y2="8"/>
+        <line x1="31" y1="47" x2="12" y2="20"/><line x1="69" y1="47" x2="88" y2="20"/>
+        <line x1="26" y1="54" x2="2" y2="40"/><line x1="74" y1="54" x2="98" y2="40"/>
       </g>
     </symbol>
   </svg>
@@ -68,33 +84,31 @@
   <main>
     <!-- HERO -->
     <section class="hero">
+      <svg class="hero__ribbons" aria-hidden="true"><use href="#ribbons"/></svg>
       <div class="container hero__inner">
         <div class="hero__text">
           <p class="eyebrow eyebrow--gold">Bière craft · Saint-Maur-des-Fossés</p>
           <h1>Des bières pour les bons moments</h1>
+          <span class="rule" aria-hidden="true"></span>
           <p class="hero__lead">Des bières craft modernes, fraîches et pleines de caractère.</p>
           <p class="hero__toast"><span lang="he" dir="rtl">לחיים</span> — À la vie !</p>
-          <a class="btn btn--cream" href="#bieres">Découvrir nos bières</a>
+          <a class="btn btn--cream btn--arrow" href="bieres.html">Découvrir nos bières</a>
         </div>
         <div class="hero__visual" aria-hidden="true">
+          <svg class="hero__star"><use href="#star"/></svg>
           <svg viewBox="0 0 400 400" class="hero__glasses">
-            <!-- rayons en éventail -->
-            <g stroke="#C3A15A" stroke-width="3" stroke-linecap="round" opacity=".85">
-              <line x1="200" y1="92" x2="200" y2="40"/>
-              <line x1="170" y1="98" x2="152" y2="50"/>
-              <line x1="230" y1="98" x2="248" y2="50"/>
-              <line x1="145" y1="112" x2="112" y2="74"/>
-              <line x1="255" y1="112" x2="288" y2="74"/>
-            </g>
+            <g transform="translate(200 18) scale(1.3) translate(-50 0)" style="color:#C3A15A"><use href="#rays" width="100" height="56"/></g>
             <!-- verre gauche -->
             <g transform="rotate(-14 150 250)">
               <path d="M95 130 L205 130 L192 350 Q150 362 108 350 Z" fill="#E9B949"/>
               <path d="M95 130 L205 130 L203 160 L97 160 Z" fill="#F6F1E6"/>
               <path d="M92 132 Q100 108 125 116 Q140 96 162 112 Q185 100 196 118 Q214 116 208 134 Z" fill="#F6F1E6"/>
               <path d="M95 130 L205 130 L192 350 Q150 362 108 350 Z" fill="none" stroke="#F6F1E6" stroke-width="5" stroke-linejoin="round"/>
-              <circle cx="130" cy="230" r="4" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="160" cy="280" r="3" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="145" cy="200" r="2.5" fill="#F6F1E6" opacity=".7"/>
+              <text x="150" y="250" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="27" fill="#F6F1E6" letter-spacing="1">LECHAIM</text>
+              <text x="150" y="268" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="12" fill="#F6F1E6">לחיים</text>
+              <circle cx="130" cy="300" r="4" fill="#F6F1E6" opacity=".7"/>
+              <circle cx="165" cy="320" r="3" fill="#F6F1E6" opacity=".7"/>
+              <circle cx="140" cy="190" r="2.5" fill="#F6F1E6" opacity=".7"/>
             </g>
             <!-- verre droit -->
             <g transform="rotate(14 250 250)">
@@ -102,10 +116,13 @@
               <path d="M195 130 L305 130 L303 160 L197 160 Z" fill="#F6F1E6"/>
               <path d="M192 132 Q200 110 224 116 Q242 98 262 112 Q286 102 296 120 Q312 118 308 134 Z" fill="#F6F1E6"/>
               <path d="M195 130 L305 130 L292 350 Q250 362 208 350 Z" fill="none" stroke="#F6F1E6" stroke-width="5" stroke-linejoin="round"/>
-              <circle cx="240" cy="250" r="4" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="268" cy="210" r="3" fill="#F6F1E6" opacity=".7"/>
-              <circle cx="255" cy="300" r="2.5" fill="#F6F1E6" opacity=".7"/>
+              <text x="250" y="250" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="27" fill="#F6F1E6" letter-spacing="1">LECHAIM</text>
+              <text x="250" y="268" text-anchor="middle" font-family="Heebo, sans-serif" font-weight="700" font-size="12" fill="#F6F1E6">לחיים</text>
+              <circle cx="240" cy="310" r="4" fill="#F6F1E6" opacity=".7"/>
+              <circle cx="268" cy="200" r="3" fill="#F6F1E6" opacity=".7"/>
             </g>
+            <!-- éclaboussures -->
+            <g fill="#F6F1E6"><circle cx="200" cy="104" r="5"/><circle cx="214" cy="88" r="3.5"/><circle cx="186" cy="84" r="3"/><circle cx="226" cy="100" r="2.5"/></g>
           </svg>
         </div>
       </div>
@@ -197,10 +214,42 @@
     <!-- NOTRE HISTOIRE -->
     <section class="section story" id="histoire">
       <div class="container story__inner">
-        <div class="story__mark" aria-hidden="true">
-          <span class="semi semi--blue"></span>
-          <span class="semi semi--gold"></span>
-          <svg class="story__star"><use href="#star"/></svg>
+        <div class="story__illu" aria-hidden="true">
+          <svg viewBox="0 0 400 420">
+            <defs>
+              <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.6" fill="#0B3DB8"/></pattern>
+              <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
+              <mask id="fade-m"><rect width="400" height="420" fill="url(#fade)"/></mask>
+              <clipPath id="frame"><rect width="400" height="420" rx="0"/></clipPath>
+            </defs>
+            <g clip-path="url(#frame)">
+              <path d="M40 420 A160 160 0 0 1 360 420 Z" fill="url(#dots)" mask="url(#fade-m)"/>
+              <g transform="translate(200 20) scale(1.5) translate(-50 0)" style="color:#C3A15A"><use href="#rays" width="100" height="56"/></g>
+            <g transform="translate(186 118) rotate(24)">
+              <rect x="-11" y="-12" width="22" height="13" rx="3" fill="#C3A15A"/>
+              <path d="M-9 0 H9 V45 C9 62 26 66 26 90 V300 H-26 V90 C-26 66 -9 62 -9 45 Z" fill="#0B3DB8"/>
+              <path d="M-3 8 V44 C-3 60 -16 70 -18 92 V290" stroke="#F6F1E6" stroke-opacity=".35" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <rect x="-26" y="118" width="52" height="46" fill="#F6F1E6"/>
+              <text x="0" y="146" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="15" fill="#0B3DB8">LECHAIM</text>
+              <rect x="-26" y="152" width="52" height="12" fill="#3d67d6"/>
+              <rect x="-34" y="190" width="68" height="64" rx="28" fill="#3d67d6"/>
+              <path d="M-20 204 H20 M-20 222 H20 M-20 240 H20" stroke="#0B3DB8" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+              <rect x="-30" y="236" width="60" height="200" rx="22" fill="#3d67d6"/>
+            </g>
+            <g transform="translate(214 118) rotate(-24)">
+              <rect x="-11" y="-12" width="22" height="13" rx="3" fill="#C3A15A"/>
+              <path d="M-9 0 H9 V45 C9 62 26 66 26 90 V300 H-26 V90 C-26 66 -9 62 -9 45 Z" fill="#0B3DB8"/>
+              <path d="M-3 8 V44 C-3 60 -16 70 -18 92 V290" stroke="#F6F1E6" stroke-opacity=".35" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <rect x="-26" y="118" width="52" height="46" fill="#F6F1E6"/>
+              <text x="0" y="146" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="15" fill="#0B3DB8">LECHAIM</text>
+              <rect x="-26" y="152" width="52" height="12" fill="#3d67d6"/>
+              <rect x="-34" y="190" width="68" height="64" rx="28" fill="#3d67d6"/>
+              <path d="M-20 204 H20 M-20 222 H20 M-20 240 H20" stroke="#0B3DB8" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+              <rect x="-30" y="236" width="60" height="200" rx="22" fill="#3d67d6"/>
+            </g>
+              <g fill="#C3A15A"><circle cx="200" cy="104" r="4"/><circle cx="188" cy="90" r="2.5"/><circle cx="213" cy="92" r="3"/></g>
+            </g>
+          </svg>
         </div>
         <div class="story__text">
           <p class="eyebrow">Notre histoire</p>

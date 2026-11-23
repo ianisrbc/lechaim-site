@@ -23,9 +23,25 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <!-- Étoile de David au trait, ouverte en bas (comme sur l'étiquette) -->
     <symbol id="star" viewBox="0 0 100 100">
-      <g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+      <g fill="none" stroke="currentColor" style="stroke-width: var(--sw, 4)" stroke-linejoin="round" stroke-linecap="round">
         <path d="M50 8 L86 70 L14 70 Z"/>
         <path d="M14 30 L86 30 L56 82 M44 82 L14 30"/>
+      </g>
+    </symbol>
+    <!-- Vagues épaisses de la planche (couleur = currentColor) -->
+    <symbol id="ribbons" viewBox="0 0 600 500" preserveAspectRatio="xMaxYMid slice" style="overflow:visible">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <path d="M640 30 C 500 50, 540 190, 400 225 S 250 400, 150 540" stroke-width="74"/>
+        <path d="M660 300 C 570 300, 560 420, 460 540" stroke-width="52"/>
+      </g>
+    </symbol>
+    <!-- Rayons en éventail -->
+    <symbol id="rays" viewBox="0 0 100 56">
+      <g stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none">
+        <line x1="50" y1="40" x2="50" y2="4"/>
+        <line x1="40" y1="42" x2="30" y2="8"/><line x1="60" y1="42" x2="70" y2="8"/>
+        <line x1="31" y1="47" x2="12" y2="20"/><line x1="69" y1="47" x2="88" y2="20"/>
+        <line x1="26" y1="54" x2="2" y2="40"/><line x1="74" y1="54" x2="98" y2="40"/>
       </g>
     </symbol>
   </svg>
@@ -67,9 +83,12 @@
 
   <main>
     <section class="page-hero">
+      <svg class="hero__ribbons hero__ribbons--page" aria-hidden="true"><use href="#ribbons"/></svg>
+      <svg class="page-hero__star" aria-hidden="true"><use href="#star"/></svg>
       <div class="container page-hero__inner">
         <p class="eyebrow eyebrow--gold">Nos bières</p>
         <h1>Lechaim Pale Ale – Blonde</h1>
+        <span class="rule" aria-hidden="true"></span>
         <p class="page-hero__lead">La première bière Lechaim. Une pale ale blonde, légère en alcool, servie en bouteille de 33 cl.</p>
       </div>
       <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
