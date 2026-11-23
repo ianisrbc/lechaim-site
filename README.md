@@ -6,27 +6,26 @@ Site vitrine statique (HTML, CSS, JavaScript, sans outil de build).
 Ouvrir `index.html` dans un navigateur, ou lancer `python3 -m http.server` dans ce dossier puis aller sur http://localhost:8000.
 
 ## Structure
-- `index.html` : page d'accueil (hero, Nos bières, Notre histoire, Actus, Nous trouver)
-- `bieres.html` : fiche Lechaim Pale Ale – Blonde (caractéristiques, ingrédients bilingues, texte de l'étiquette, service et accords)
-- `histoire.html` : sens de לחיים, le projet, les valeurs, l'identité visuelle
-- `actus.html` : liste d'actus + article « De l'étiquette à la bouteille »
-- `trouver.html` : points de vente (provisoires), contact professionnels, adresse
+Les pages sont générées une fois par un script hors dépôt ; chaque fichier HTML est autonome et modifiable à la main.
+- `index.html` : accueil (maquette finale d'Ianis) : hero, Nos bières, Notre histoire, offre pros, Où nous trouver
+- `bieres.html` : fiche Pale Ale – Blonde (4,2 %, 33 cl et fût 30 L), ingrédients bilingues, étiquette, service ; IPA bientôt disponible
+- `histoire.html` : sens de לחיים, le projet, les valeurs, l'identité, article « De l'étiquette à la bouteille »
+- `evenements.html` : agenda (provisoire) et événements pour les pros
+- `pros.html` : offre professionnelle (livraison, fûts 30 L et bouteilles 33 cl, accompagnement, événements)
+- `trouver.html` : points de vente (provisoires), contact, adresse
 - `mentions-legales.html` : modèle à compléter
-- En-tête et pied de page sont dupliqués dans chaque page : toute modification du menu se fait dans les 6 fichiers.
-- `assets/css/style.css` : charte (couleurs et polices en variables en haut du fichier)
-- `assets/js/main.js` : contrôle d'âge, menu mobile, carrousel
-- `CNAME` : domaine personnalisé pour GitHub Pages
+- En-tête et pied de page sont dupliqués dans chaque page.
 
 ## Éléments provisoires (attribut `data-placeholder`, classe `.ph` surlignée en jaune, ou commentaire PLACEHOLDER)
 - Mentions légales : raison sociale, forme et capital, RCS, SIRET, TVA, directeur de la publication, titulaire de la marque, crédits
 - Profil de dégustation, houblons, IBU et lieu de brassage de la Pale Ale
 - Nom d'Ianis et lien Rupture Brewing sur « Notre histoire » (à valider)
 - Points de vente, articles d'actus « Exemple d'article »
-- Cible du bouton « Acheter » (mène à trouver.html#acheter)
-- `assets/img/provisoire/` : photo des verres et illustration « Notre histoire » extraites de la planche (basse définition ; l’hébreu des verres y est écrit לחים au lieu de לחיים). À remplacer par de vrais visuels.
-- Bouteilles « À venir » sur l’accueil
-- Cartes « Prochainement » dans Nos bières (Blonde et IPA non confirmées)
-- Cartes Actus
+- `assets/img/provisoire/` : photo du hero et photo de mousse extraites de la maquette (basse définition), à remplacer.
+- Plan de Paris illustratif : les épingles ne correspondent à aucun point de vente réel.
+- Texte « Nos bières sont servies dans une sélection de bars… » : à confirmer quand les points de vente existeront.
+- IPA : degré, profil et date de sortie ; offre pros : zone et délais de livraison, tarifs, détail de l'accompagnement.
+- Événements de l'agenda
 - Adresse e-mail contact@lechaim-beer.com
 - Lien Instagram @lechaim_beer
 - Bouteille dessinée en vectoriel : à remplacer par une photo avec la vraie étiquette

@@ -44,6 +44,16 @@
         <line x1="26" y1="54" x2="2" y2="40"/><line x1="74" y1="54" x2="98" y2="40"/>
       </g>
     </symbol>
+
+    <!-- Icônes au trait -->
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18M11 12v2h2v-2"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 12h24v22H4zM28 19h9l7 8v7H28z"/><circle cx="13" cy="36" r="4" fill="var(--icon-bg, #0B3DB8)"/><circle cx="36" cy="36" r="4" fill="var(--icon-bg, #0B3DB8)"/><path d="M31 22h5l4 5h-9z"/></g></symbol>
+    <symbol id="i-keg" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M11 8h26c2 5 3 11 3 16s-1 11-3 16H11c-2-5-3-11-3-16s1-11 3-16z"/><path d="M9 16h30M8 24h32M9 32h30"/><rect x="20" y="4" width="8" height="4" rx="1"/></g></symbol>
+    <symbol id="i-cheers" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><g transform="rotate(-16 15 28)"><path d="M8 14h14l-1.5 28h-11z"/><path d="M8.6 21h12.8"/></g><g transform="rotate(16 33 28)"><path d="M26 14h14l-1.5 28h-11z"/><path d="M26.6 21h12.8"/></g><path d="M24 3v5M18 5l2.5 4M30 5l-2.5 4"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="9" width="36" height="33" rx="3"/><path d="M6 18h36M15 5v8M33 5v8"/></g></symbol>
+    <symbol id="i-handshake" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 16l8-4 6 2M46 16l-8-4-10 3-8 6c-2 2 0 5 3 4l6-4"/><path d="M10 12l-6 16 4 3M38 12l6 16-4 3"/><path d="M8 31l4 4c1 1 3 1 4 0M14 33l4 4c1 1 3 1 4 0M20 36l3 3c1 1 3 1 4 0l13-8M24 31l4 4"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 22 28"><path d="M11 0C5 0 0 5 0 11c0 8 11 17 11 17s11-9 11-17C22 5 17 0 11 0z" fill="currentColor"/><circle cx="11" cy="11" r="4" fill="#efe3cc"/></symbol>
   </svg>
 
   <!-- Contrôle d'âge (exigé pour un site de boisson alcoolisée) -->
@@ -63,7 +73,6 @@
   <header class="site-header" id="top">
     <div class="container site-header__inner">
       <a class="logo" href="./" aria-label="Lechaim, accueil">
-        <svg class="logo__star" aria-hidden="true"><use href="#star"/></svg>
         <span class="logo__name">LECHAIM</span>
         <span class="logo__he" lang="he" dir="rtl">לחיים</span>
       </a>
@@ -71,12 +80,11 @@
         <span class="sr-only">Menu</span><span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="Navigation principale">
-        <a href="bieres.html">Bières</a>
+        <a href="bieres.html">Nos bières</a>
         <a href="histoire.html">Notre histoire</a>
-        <a href="actus.html">Actus</a>
-        <a href="trouver.html">Nous trouver</a>
-        <!-- PLACEHOLDER : cible du bouton Acheter à définir (boutique en ligne, revendeurs…). Mène pour l'instant à « Nous trouver ». -->
-        <a class="btn btn--blue btn--sm" href="trouver.html#acheter">Acheter</a>
+        <a href="evenements.html">Événements</a>
+        <a href="trouver.html">Où nous trouver</a>
+        <a class="btn btn--blue btn--sm btn--pro" href="pros.html">Devenir professionnel <svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></a>
       </nav>
     </div>
   </header>
@@ -144,10 +152,11 @@
         <span class="logo__he" lang="he" dir="rtl">לחיים</span>
       </div>
       <nav class="site-footer__nav" aria-label="Pied de page">
-        <a href="bieres.html">Bières</a>
+        <a href="bieres.html">Nos bières</a>
         <a href="histoire.html">Notre histoire</a>
-        <a href="actus.html">Actus</a>
-        <a href="trouver.html">Nous trouver</a>
+        <a href="evenements.html">Événements</a>
+        <a href="trouver.html">Où nous trouver</a>
+        <a href="pros.html">Devenir professionnel</a>
         <!-- PLACEHOLDER : compte Instagram de la maquette, à confirmer -->
         <a href="https://www.instagram.com/lechaim_beer/" rel="noopener">Instagram</a>
       </nav>

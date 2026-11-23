@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lechaim · Des bières pour les bons moments</title>
-  <meta name="description" content="Lechaim, bière craft de Saint-Maur-des-Fossés. Pale Ale – Blonde, 4,2 % vol., 33 cl. לחיים — À la vie !">
+  <title>Lechaim · À la vie, et à tous ceux qui la célèbrent</title>
+  <meta name="description" content="Lechaim, bières artisanales inspirées de la culture du partage. Pale Ale – Blonde 4,2 %, en fût de 30 L et bouteille de 33 cl. Offre dédiée aux professionnels.">
   <meta name="theme-color" content="#0B3DB8">
   <link rel="canonical" href="https://lechaim-beer.com/">
-  <meta property="og:title" content="Lechaim · Des bières pour les bons moments">
-  <meta property="og:description" content="Des bières craft modernes, fraîches et pleines de caractère. לחיים — À la vie !">
+  <meta property="og:title" content="Lechaim · À la vie, et à tous ceux qui la célèbrent">
+  <meta property="og:description" content="Lechaim, bières artisanales inspirées de la culture du partage. Pale Ale – Blonde 4,2 %, en fût de 30 L et bouteille de 33 cl. Offre dédiée aux professionnels.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lechaim-beer.com/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -44,6 +44,16 @@
         <line x1="26" y1="54" x2="2" y2="40"/><line x1="74" y1="54" x2="98" y2="40"/>
       </g>
     </symbol>
+
+    <!-- Icônes au trait -->
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18M11 12v2h2v-2"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 12h24v22H4zM28 19h9l7 8v7H28z"/><circle cx="13" cy="36" r="4" fill="var(--icon-bg, #0B3DB8)"/><circle cx="36" cy="36" r="4" fill="var(--icon-bg, #0B3DB8)"/><path d="M31 22h5l4 5h-9z"/></g></symbol>
+    <symbol id="i-keg" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M11 8h26c2 5 3 11 3 16s-1 11-3 16H11c-2-5-3-11-3-16s1-11 3-16z"/><path d="M9 16h30M8 24h32M9 32h30"/><rect x="20" y="4" width="8" height="4" rx="1"/></g></symbol>
+    <symbol id="i-cheers" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><g transform="rotate(-16 15 28)"><path d="M8 14h14l-1.5 28h-11z"/><path d="M8.6 21h12.8"/></g><g transform="rotate(16 33 28)"><path d="M26 14h14l-1.5 28h-11z"/><path d="M26.6 21h12.8"/></g><path d="M24 3v5M18 5l2.5 4M30 5l-2.5 4"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="9" width="36" height="33" rx="3"/><path d="M6 18h36M15 5v8M33 5v8"/></g></symbol>
+    <symbol id="i-handshake" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 16l8-4 6 2M46 16l-8-4-10 3-8 6c-2 2 0 5 3 4l6-4"/><path d="M10 12l-6 16 4 3M38 12l6 16-4 3"/><path d="M8 31l4 4c1 1 3 1 4 0M14 33l4 4c1 1 3 1 4 0M20 36l3 3c1 1 3 1 4 0l13-8M24 31l4 4"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 22 28"><path d="M11 0C5 0 0 5 0 11c0 8 11 17 11 17s11-9 11-17C22 5 17 0 11 0z" fill="currentColor"/><circle cx="11" cy="11" r="4" fill="#efe3cc"/></symbol>
   </svg>
 
   <!-- Contrôle d'âge (exigé pour un site de boisson alcoolisée) -->
@@ -63,7 +73,6 @@
   <header class="site-header" id="top">
     <div class="container site-header__inner">
       <a class="logo" href="./" aria-label="Lechaim, accueil">
-        <svg class="logo__star" aria-hidden="true"><use href="#star"/></svg>
         <span class="logo__name">LECHAIM</span>
         <span class="logo__he" lang="he" dir="rtl">לחיים</span>
       </a>
@@ -71,49 +80,52 @@
         <span class="sr-only">Menu</span><span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="Navigation principale">
-        <a href="bieres.html">Bières</a>
+        <a href="bieres.html">Nos bières</a>
         <a href="histoire.html">Notre histoire</a>
-        <a href="actus.html">Actus</a>
-        <a href="trouver.html">Nous trouver</a>
-        <!-- PLACEHOLDER : cible du bouton Acheter à définir (boutique en ligne, revendeurs…). Mène pour l'instant à « Nous trouver ». -->
-        <a class="btn btn--blue btn--sm" href="trouver.html#acheter">Acheter</a>
+        <a href="evenements.html">Événements</a>
+        <a href="trouver.html">Où nous trouver</a>
+        <a class="btn btn--blue btn--sm btn--pro" href="pros.html">Devenir professionnel <svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO (maquette de la planche) -->
-    <section class="hero hero--photo">
-      <!-- PLACEHOLDER : visuel extrait de la planche d'identité, basse définition. À remplacer par une vraie photo (verres Lechaim qui trinquent). -->
-      <img class="hero__photo" src="assets/img/provisoire/hero-verres.jpg" alt="Deux verres de bière Lechaim qui trinquent" width="891" height="699" data-placeholder>
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <h1>Des bières pour les bons moments</h1>
-          <span class="rule" aria-hidden="true"></span>
-          <p class="hero__lead">Des bières craft modernes, fraîches et pleines de caractère.</p>
-          <p class="hero__toast"><span lang="he" dir="rtl">לחיים</span> — À la vie !</p>
-          <a class="btn btn--cream btn--arrow" href="bieres.html">Découvrir nos bières</a>
-        </div>
+    <!-- HERO -->
+    <section class="home-hero">
+      <!-- PLACEHOLDER : photo extraite de la maquette, basse définition. À remplacer par la vraie photo. -->
+      <img class="home-hero__photo" src="assets/img/provisoire/hero-terrasse.jpg" alt="Deux verres Lechaim qui trinquent en terrasse" width="1056" height="628" data-placeholder>
+      <svg class="home-hero__shape" viewBox="0 0 700 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0 H600 C 520 90, 560 200, 500 300 C 440 390, 450 500, 420 600 H0 Z" fill="#0B3DB8"/>
+      </svg>
+      <div class="container home-hero__inner">
+        <h1>À la vie, et à tous ceux qui la célèbrent</h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="home-hero__lead">Des bières artisanales, modernes et conviviales, inspirées de la culture du partage.</p>
+        <a class="btn btn--cream btn--arrow" href="pros.html">Devenir professionnel</a>
       </div>
+      <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 70 C 300 20, 600 110, 900 70 S 1300 30, 1440 60 L1440 120 L0 120 Z" fill="#F6F1E6"/>
+      </svg>
     </section>
 
-    <!-- NOS BIÈRES + NOTRE HISTOIRE, côte à côte comme sur la maquette -->
-    <section class="duo">
-      <div class="container duo__inner">
-        <div class="duo__beers" id="bieres">
-          <h2 class="duo__title">Nos bières</h2>
-          <div class="shelf" data-carousel>
-            <button class="carousel__btn carousel__btn--prev" aria-label="Bière précédente" data-prev>‹</button>
-            <div class="shelf__track" data-track>
-              <a class="shelf__item" href="bieres.html">
-                <svg class="bottle" viewBox="0 0 160 420" role="img" aria-label="Bouteille Lechaim Pale Ale – Blonde, 33 cl">
+    <!-- NOS BIÈRES -->
+    <section class="home-beers" id="bieres">
+      <div class="container home-beers__inner">
+        <div class="home-beers__intro">
+          <h2 class="title-xl">Nos bières</h2>
+          <p>Des recettes actuelles, équilibrées et brassées avec exigence.</p>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <div class="home-beer">
+          <div class="home-beer__visual"><svg class="blob" viewBox="0 0 200 220" aria-hidden="true"><path d="M112 6 C 160 0, 196 34, 186 82 C 178 120, 198 150, 176 186 C 150 226, 92 222, 52 200 C 14 180, -6 140, 10 100 C 22 70, 50 62, 62 38 C 74 16, 88 9, 112 6 Z" fill="#0B3DB8"/></svg>
+            <svg class="bottle" viewBox="0 0 160 420" role="img" aria-label="Bouteille Lechaim Pale Ale – Blonde, 33 cl">
                   <defs>
-                    <linearGradient id="glass" x1="0" x2="1">
+                    <linearGradient id="glass-b" x1="0" x2="1">
                       <stop offset="0" stop-color="#5a2f0c"/><stop offset=".35" stop-color="#8a4a14"/><stop offset=".6" stop-color="#6b3810"/><stop offset="1" stop-color="#3e1f07"/>
                     </linearGradient>
                   </defs>
                   <rect x="60" y="4" width="40" height="16" rx="3" fill="#C3A15A"/>
-                  <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="url(#glass)"/>
+                  <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="url(#glass-b)"/>
                   <path d="M70 30 V116 C70 140 40 158 34 190 V390" stroke="#fff" stroke-opacity=".18" stroke-width="5" fill="none" stroke-linecap="round"/>
                   <rect x="20" y="214" width="120" height="132" fill="#F6F1E6"/>
                   <use href="#star" x="86" y="226" width="26" height="26" style="color:#C3A15A"/>
@@ -126,99 +138,95 @@
                   <text x="26" y="341" font-family="Montserrat, sans-serif" font-weight="700" font-size="5.5" fill="#F6F1E6">4,2% ALC/VOL</text>
                   <text x="134" y="341" text-anchor="end" font-family="Montserrat, sans-serif" font-weight="700" font-size="5.5" fill="#F6F1E6">33CL</text>
                 </svg>
-                <span class="shelf__name">Pale Ale – Blonde</span>
-                <span class="shelf__meta">4,2 % vol. · 33 cl</span>
-              </a>
-              <!-- PLACEHOLDER : références à venir (Blonde et IPA de la planche non confirmées) -->
-              <div class="shelf__item" data-placeholder>
-                <svg class="bottle bottle--soon" viewBox="0 0 160 420" role="img" aria-label="Bouteille à venir">
-                  <rect x="60" y="4" width="40" height="16" rx="3" fill="#C3A15A" opacity=".6"/>
-                  <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="#cdbfa6"/>
-                  <rect x="20" y="214" width="120" height="132" fill="#F6F1E6"/>
-                  <use href="#star" x="86" y="226" width="26" height="26" style="color:#C3A15A"/>
-                  <text x="80" y="284" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="40" fill="#0B3DB8" opacity=".45" letter-spacing="1">LECHAIM</text>
-                  <rect x="20" y="314" width="120" height="32" fill="#E2D8C8"/>
-                  <text x="80" y="335" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#0F1C2E" opacity=".6" letter-spacing="1.5">À VENIR</text>
-                </svg>
-                <span class="shelf__name">Prochainement</span>
-                <span class="shelf__meta">Nouvelle recette</span>
-              </div>
-              <div class="shelf__item" data-placeholder>
-                <svg class="bottle bottle--soon" viewBox="0 0 160 420" role="img" aria-label="Bouteille à venir">
-                  <rect x="60" y="4" width="40" height="16" rx="3" fill="#C3A15A" opacity=".6"/>
-                  <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="#cdbfa6"/>
-                  <rect x="20" y="214" width="120" height="132" fill="#F6F1E6"/>
-                  <use href="#star" x="86" y="226" width="26" height="26" style="color:#C3A15A"/>
-                  <text x="80" y="284" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="40" fill="#0B3DB8" opacity=".45" letter-spacing="1">LECHAIM</text>
-                  <rect x="20" y="314" width="120" height="32" fill="#E2D8C8"/>
-                  <text x="80" y="335" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#0F1C2E" opacity=".6" letter-spacing="1.5">À VENIR</text>
-                </svg>
-                <span class="shelf__name">Prochainement</span>
-                <span class="shelf__meta">Édition à venir</span>
-              </div>
-            </div>
-            <button class="carousel__btn carousel__btn--next" aria-label="Bière suivante" data-next>›</button>
+          </div>
+          <div class="home-beer__info">
+            <h3>Pale Ale<br>4,2 %</h3>
+            <p>Blonde, fraîche et équilibrée.</p>
+            <a class="btn btn--outline btn--arrow" href="bieres.html">Disponible</a>
           </div>
         </div>
-        <div class="duo__story" id="histoire">
-          <div class="duo__story-text">
-            <h2 class="duo__title">Notre histoire</h2>
-            <p><strong>Lechaim</strong>, c'est une bière craft inspirée par la culture du partage et le plaisir de se retrouver. Son nom reprend le toast hébreu <span lang="he" dir="rtl" class="he-inline">לחיים</span>, « À la vie ! ». Une identité juive, entre tradition et modernité.</p>
-            <a class="link-arrow" href="histoire.html">En savoir plus</a>
+        <div class="home-beer home-beer--soon">
+          <div class="home-beer__visual"><svg class="blob" viewBox="0 0 200 220" aria-hidden="true"><path d="M112 6 C 160 0, 196 34, 186 82 C 178 120, 198 150, 176 186 C 150 226, 92 222, 52 200 C 14 180, -6 140, 10 100 C 22 70, 50 62, 62 38 C 74 16, 88 9, 112 6 Z" fill="#0B3DB8"/></svg>
+            <svg class="home-beer__rays" aria-hidden="true"><use href="#rays"/></svg>
+            <svg class="bottle bottle--ipa" viewBox="0 0 160 420" role="img" aria-label="Bouteille IPA, bientôt disponible">
+            <defs><linearGradient id="glass-ipa" x1="0" x2="1"><stop offset="0" stop-color="#2a1c10"/><stop offset=".4" stop-color="#4a3420"/><stop offset=".65" stop-color="#35261a"/><stop offset="1" stop-color="#1c130b"/></linearGradient></defs>
+            <rect x="60" y="4" width="40" height="16" rx="3" fill="#2b2b2b"/>
+            <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="url(#glass-ipa)"/>
+            <path d="M70 30 V116 C70 140 40 158 34 190 V390" stroke="#fff" stroke-opacity=".12" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <text x="80" y="275" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="58" fill="#F6F1E6" letter-spacing="1">IPA</text>
+            <rect x="36" y="296" width="88" height="34" rx="17" fill="none" stroke="#F6F1E6" stroke-width="2"/>
+            <text x="80" y="310" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="8.5" fill="#F6F1E6" letter-spacing=".8">BIENTÔT</text>
+            <text x="80" y="322" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="8.5" fill="#F6F1E6" letter-spacing=".8">DISPONIBLE</text>
+          </svg>
           </div>
-          <!-- PLACEHOLDER : illustration extraite de la planche, très basse définition. À remplacer. -->
-          <img class="duo__illu" src="assets/img/provisoire/histoire-illustration.jpg" alt="" width="273" height="357" data-placeholder>
         </div>
       </div>
     </section>
 
-    <!-- ACTUS -->
-    <section class="section news" id="actus">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Actus</p>
-          <h2>Les dernières nouvelles</h2>
+    <!-- NOTRE HISTOIRE -->
+    <section class="home-story" id="histoire">
+      <!-- PLACEHOLDER : photo extraite de la maquette, basse définition -->
+      <img class="home-story__photo" src="assets/img/provisoire/mousse.jpg" alt="" width="600" height="316" data-placeholder>
+      <div class="container home-story__inner">
+        <div class="home-story__text">
+          <h2 class="title-xl">Notre histoire</h2>
+          <p>Lechaim (<span lang="he" dir="rtl" class="he-inline">לחיים</span>), c'est une invitation à célébrer la vie, les rencontres et les bons moments.</p>
+          <p>Une bière artisanale, pensée pour rassembler, avec un goût franc, accessible et exigeant.</p>
+          <a class="btn btn--outline btn--arrow" href="histoire.html">Découvrir notre histoire</a>
         </div>
-        <div class="news__grid">
-          <article class="news-card">
-            <p class="news-card__tag">Lancement</p>
-            <h3>La Pale Ale arrive</h3>
-            <p>La première bière Lechaim : une Pale Ale – Blonde à 4,2 % vol., en bouteille de 33 cl.</p>
-            <a class="link-arrow" href="bieres.html">Voir la fiche</a>
-          </article>
-          <article class="news-card news-card--blue">
-            <p class="news-card__tag">Coulisses</p>
-            <h3>De l'étiquette à la bouteille</h3>
-            <p>Comment l'identité bleu, crème et or a pris forme, des premières esquisses à l'impression.</p>
-            <a class="link-arrow link-arrow--gold" href="actus.html#etiquette">Lire</a>
-          </article>
-          <!-- PLACEHOLDER : à remplacer par une vraie annonce -->
-          <article class="news-card news-card--placeholder" data-placeholder>
-            <p class="news-card__tag">Events</p>
-            <h3>Dégustations à venir</h3>
-            <p>Les dates et les lieux des prochaines dégustations seront publiés ici.</p>
-          </article>
-        </div>
-        <p><a class="link-arrow" href="actus.html">Toutes les actus</a></p>
+        <svg class="home-story__star" aria-hidden="true"><use href="#star"/></svg>
       </div>
     </section>
 
-    <!-- NOUS TROUVER -->
-    <section class="section find" id="trouver">
-      <div class="container find__inner">
-        <div>
-          <p class="eyebrow eyebrow--gold">Nous trouver</p>
-          <h2>Où trouver une Lechaim</h2>
-          <p>La liste des bars, caves et épiceries qui proposent Lechaim sera publiée dès les premières livraisons. Vous tenez un établissement et souhaitez proposer notre bière ? Écrivez-nous.</p>
-          <!-- PLACEHOLDER : adresse e-mail de contact à confirmer -->
-          <a class="btn btn--cream" href="mailto:contact@lechaim-beer.com">Nous contacter</a>
-          <a class="link-arrow link-arrow--gold" href="trouver.html" style="margin-left:1.2rem">Points de vente</a>
+    <!-- OFFRE PROS -->
+    <section class="home-pros">
+      <div class="container home-pros__inner">
+        <h2>Une offre<br>pensée pour<br>les pros</h2>
+        <ul class="home-pros__list">
+          <li><svg aria-hidden="true"><use href="#i-truck"/></svg>Livraison<br>rapide</li>
+          <li><svg aria-hidden="true"><use href="#i-keg"/></svg>Fûts 30 L<br>&amp; bouteilles 33 cl</li>
+          <li><svg aria-hidden="true"><use href="#i-cheers"/></svg>Accompagnement<br>sur mesure</li>
+          <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>Événements<br>&amp; privatisations</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- OÙ NOUS TROUVER -->
+    <section class="home-find" id="trouver">
+      <div class="container home-find__inner">
+        <div class="home-find__text">
+          <h2 class="title-xl">Où nous trouver&nbsp;?</h2>
+          <!-- PLACEHOLDER : texte de la maquette, à confirmer quand les points de vente seront ouverts -->
+          <p>Nos bières sont servies dans une sélection de bars, restaurants et cavistes à Paris et en Île-de-France.</p>
+          <a class="btn btn--outline btn--arrow" href="trouver.html">Voir tous les points de vente</a>
         </div>
-        <address class="find__card">
-          <p class="find__name">LECHAIM</p>
-          <p>5 boulevard de Créteil<br>94100 Saint-Maur-des-Fossés<br>France</p>
-          <p class="find__web">lechaim-beer.com</p>
-        </address>
+        <a class="home-find__map" href="trouver.html" aria-label="Voir les points de vente">
+          <!-- Plan illustratif : les épingles ne correspondent pas encore à de vrais points de vente -->
+          <svg class="map" viewBox="0 0 300 220" role="img" aria-label="Plan schématique de Paris">
+            <rect width="300" height="220" rx="18" fill="#efe3cc"/>
+            <g stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9">
+              <path d="M10 60 L120 90 L290 40"/><path d="M30 200 L130 110 L170 10"/><path d="M60 10 L150 150 L280 210"/>
+              <path d="M10 140 L290 130"/><path d="M220 10 L200 210"/><path d="M90 210 L60 20"/>
+            </g>
+            <g stroke="#fff" stroke-width="2" fill="none" opacity=".8">
+              <path d="M0 100 L300 70"/><path d="M110 0 L100 220"/><path d="M250 0 L170 220"/><path d="M0 180 L300 170"/>
+              <path d="M40 0 L20 220"/><path d="M0 30 L300 20"/>
+            </g>
+            <path d="M0 170 C 50 150, 90 175, 130 160 S 210 120, 300 150" stroke="#9ec5e8" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <text x="150" y="122" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="20" letter-spacing="3" fill="#0F1C2E">PARIS</text>
+            <g fill="#0B3DB8">
+              <use href="#i-pin" x="56" y="30" width="22" height="28"/><use href="#i-pin" x="170" y="22" width="22" height="28"/>
+              <use href="#i-pin" x="40" y="94" width="22" height="28"/><use href="#i-pin" x="200" y="82" width="22" height="28"/>
+              <use href="#i-pin" x="182" y="136" width="22" height="28"/><use href="#i-pin" x="96" y="146" width="22" height="28"/>
+            </g>
+          </svg>
+        </a>
+        <div class="home-find__pro">
+          <svg class="home-find__icon" aria-hidden="true"><use href="#i-handshake"/></svg>
+          <h3>Vous êtes un professionnel ?</h3>
+          <p>Bars, restaurants, cavistes, hôtels, entreprises… Travaillons ensemble pour faire découvrir Lechaim à vos clients.</p>
+          <a class="btn btn--blue btn--arrow" href="pros.html">Devenir partenaire</a>
+        </div>
       </div>
     </section>
   </main>
@@ -230,10 +238,11 @@
         <span class="logo__he" lang="he" dir="rtl">לחיים</span>
       </div>
       <nav class="site-footer__nav" aria-label="Pied de page">
-        <a href="bieres.html">Bières</a>
+        <a href="bieres.html">Nos bières</a>
         <a href="histoire.html">Notre histoire</a>
-        <a href="actus.html">Actus</a>
-        <a href="trouver.html">Nous trouver</a>
+        <a href="evenements.html">Événements</a>
+        <a href="trouver.html">Où nous trouver</a>
+        <a href="pros.html">Devenir professionnel</a>
         <!-- PLACEHOLDER : compte Instagram de la maquette, à confirmer -->
         <a href="https://www.instagram.com/lechaim_beer/" rel="noopener">Instagram</a>
       </nav>
