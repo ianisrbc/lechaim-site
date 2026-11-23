@@ -92,8 +92,8 @@
   <main>
     <!-- HERO -->
     <section class="home-hero">
-      <!-- PLACEHOLDER : photo extraite de l'image cible, à remplacer par la version haute définition générée -->
-      <img class="home-hero__photo" src="assets/img/provisoire/hero-mains.jpg" alt="Deux mains trinquent avec des verres Lechaim" width="1288" height="780" data-placeholder>
+      <img class="home-hero__photo" src="assets/img/visuels/hero-verres.jpg" alt="Deux verres Lechaim sur une table en bois, en terrasse" width="1672" height="941">
+      <svg class="home-hero__star" aria-hidden="true"><use href="#star"/></svg>
       <svg class="home-hero__shape" viewBox="0 0 700 600" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 0 H600 C 520 90, 560 200, 500 300 C 440 390, 450 500, 420 600 H0 Z" fill="#0B3DB8"/>
       </svg>
@@ -129,17 +129,11 @@
         <div class="home-beer home-beer--soon">
           <div class="home-beer__visual"><svg class="blob" viewBox="0 0 200 220" aria-hidden="true"><path d="M112 6 C 160 0, 196 34, 186 82 C 178 120, 198 150, 176 186 C 150 226, 92 222, 52 200 C 14 180, -6 140, 10 100 C 22 70, 50 62, 62 38 C 74 16, 88 9, 112 6 Z" fill="#0B3DB8"/></svg>
             <img class="home-beer__rays" src="assets/img/visuels/motif-rayons.png" alt="" aria-hidden="true">
-            <!-- PLACEHOLDER : bouteille IPA dessinée, à remplacer par la photo détourée -->
-            <svg class="bottle bottle--ipa" viewBox="0 0 160 420" role="img" aria-label="Bouteille IPA, bientôt disponible">
-            <defs><linearGradient id="glass-ipa" x1="0" x2="1"><stop offset="0" stop-color="#2a1c10"/><stop offset=".4" stop-color="#4a3420"/><stop offset=".65" stop-color="#35261a"/><stop offset="1" stop-color="#1c130b"/></linearGradient></defs>
-            <rect x="60" y="4" width="40" height="16" rx="3" fill="#2b2b2b"/>
-            <path d="M62 20 H98 V118 C98 150 140 160 140 200 V398 Q140 414 124 414 H36 Q20 414 20 398 V200 C20 160 62 150 62 118 Z" fill="url(#glass-ipa)"/>
-            <path d="M70 30 V116 C70 140 40 158 34 190 V390" stroke="#fff" stroke-opacity=".12" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <text x="80" y="275" text-anchor="middle" font-family="Bebas Neue Pro, Bebas Neue, Impact, sans-serif" font-size="58" fill="#F6F1E6" letter-spacing="1">IPA</text>
-            <rect x="36" y="296" width="88" height="34" rx="17" fill="none" stroke="#F6F1E6" stroke-width="2"/>
-            <text x="80" y="310" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="8.5" fill="#F6F1E6" letter-spacing=".8">BIENTÔT</text>
-            <text x="80" y="322" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="700" font-size="8.5" fill="#F6F1E6" letter-spacing=".8">DISPONIBLE</text>
-          </svg>
+            <div class="ipa-bottle" role="img" aria-label="Bouteille Lechaim IPA, bientôt disponible">
+              <img src="assets/img/visuels/bouteille-ipa.webp" alt="" width="420" height="860">
+              <span class="ipa-bottle__name">IPA</span>
+              <span class="ipa-bottle__badge">Bientôt<br>disponible</span>
+            </div>
           </div>
         </div>
       </div>
@@ -147,7 +141,7 @@
 
     <!-- NOTRE HISTOIRE -->
     <section class="home-story" id="histoire">
-      <img class="home-story__photo" src="assets/img/visuels/mousse.jpg" alt="" width="1400" height="788" loading="lazy">
+      <img class="home-story__photo" src="assets/img/visuels/mousse.jpg" alt="" width="1448" height="1086" loading="lazy">
       <div class="container home-story__inner">
         <div class="home-story__text">
           <h2 class="title-xl">Notre histoire</h2>

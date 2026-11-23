@@ -21,9 +21,7 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 - Profil de dégustation, houblons, IBU et lieu de brassage de la Pale Ale
 - Nom d'Ianis et lien Rupture Brewing sur « Notre histoire » (à valider)
 - Points de vente, articles d'actus « Exemple d'article »
-- `assets/img/provisoire/hero-mains.jpg` : photo du hero extraite de l’image cible (définition moyenne), à remplacer.
-- Bouteille IPA dessinée en SVG sur l’accueil, à remplacer par la photo détourée.
-- `assets/img/visuels/` : visuels fournis par Ianis (bouteilles, pictos, carte, motifs, photos). L'étiquette IPA porte un texte anglais et 6,2 % non confirmés.
+- `assets/img/visuels/` : visuels fournis par Ianis (bouteilles, pictos, carte, motifs, photos). Le texte « IPA / Bientôt disponible » est posé en HTML sur la bouteille vierge.
 - Plan de Paris illustratif : les épingles ne correspondent à aucun point de vente réel.
 - Texte « Nos bières sont servies dans une sélection de bars… » : à confirmer quand les points de vente existeront.
 - IPA : degré, profil et date de sortie ; offre pros : zone et délais de livraison, tarifs, détail de l'accompagnement.
