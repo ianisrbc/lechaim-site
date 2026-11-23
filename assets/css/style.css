@@ -1005,3 +1005,4 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 .home-find--pro-only { padding: 64px 0 88px; }
 .home-find--pro-only .home-find__inner { display: block; }
 .home-find--pro-only .home-find__pro { border: 0; padding: 0; max-width: 640px; margin-inline: auto; text-align: center; display: grid; justify-items: center; }
+@media (min-width: 861px) { .ingredients { grid-template-columns: 1fr 1fr; } }
