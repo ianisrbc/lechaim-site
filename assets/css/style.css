@@ -1007,3 +1007,4 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 .home-find--pro-only .home-find__pro { border: 0; padding: 0; max-width: 640px; margin-inline: auto; text-align: center; display: grid; justify-items: center; }
 @media (min-width: 861px) { .ingredients { grid-template-columns: 1fr 1fr; } }
 .ingredients__allergens { margin-top: .7rem !important; padding-top: .7rem; border-top: 1px solid #e6dccb; font-size: .92rem; color: #4a5361; }
+.ingredients__kosher { margin-top: .4rem !important; font-size: .92rem; color: #4a5361; }
