@@ -9,7 +9,7 @@ Ouvrir `index.html` dans un navigateur, ou lancer `python3 -m http.server` dans 
 Les pages sont générées une fois par un script hors dépôt ; chaque fichier HTML est autonome et modifiable à la main.
 - `index.html` : accueil (maquette finale d'Ianis) : hero, Nos bières, Notre histoire, offre pros, Où nous trouver
 - `bieres.html` : fiche Pale Ale – Blonde (4,2 %, 33 cl et fût 30 L), ingrédients bilingues, étiquette, service ; IPA bientôt disponible
-- `histoire.html` : maquette « Notre histoire » d'Ianis : héros bleu, « Lechaim, c'est À la vie », une culture du partage, les moments qui nous rassemblent
+- `histoire.html` : sens de לחיים, le projet, les valeurs, l'identité, article « De l'étiquette à la bouteille »
 - `evenements.html` : location de tireuse (solution clé en main, occasions, formulaire de devis qui ouvre la messagerie)
 - `pros.html` : offre professionnelle validée (1,80 € HT la bouteille 33 cl, 100 € HT le fût 30 L, livraison offerte, sans minimum) et formulaire « Devenons partenaires » (ouvre la messagerie vers hello@lechaim-beer.com, pas de serveur)
 - `trouver.html` : carte et liste des points de vente avec recherche (provisoire), contact, adresse
