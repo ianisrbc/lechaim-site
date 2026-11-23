@@ -595,3 +595,22 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 .checklist li { padding: 12px 16px 12px 44px; background: #fffdf8; border: 1px solid #d6cab6; border-radius: 12px; position: relative; font-weight: 600; }
 .checklist li::before { content: ""; position: absolute; left: 16px; top: 50%; width: 14px; height: 8px; border: solid var(--gold); border-width: 0 0 2.5px 2.5px; transform: translateY(-70%) rotate(-45deg); }
 .specs--two { grid-template-columns: 1fr 1fr; margin-bottom: 1.4rem; }
+
+/* ===== Vrais visuels (23/11) ===== */
+.bottle-img { position: relative; height: 340px; width: auto; filter: drop-shadow(0 16px 18px rgba(15, 28, 46, .25)); }
+.product__visual .bottle-img { height: 460px; }
+.motif-rays { position: absolute; width: 180px; top: 18px; left: 50%; transform: translateX(-50%); opacity: .9; }
+.product__visual { padding-top: 80px; }
+.home-beer__ipa { width: 230px; height: 300px; object-fit: cover; object-position: 30% 40%; border-radius: var(--radius); box-shadow: 0 14px 30px rgba(15, 28, 46, .16); }
+.home-story__star { width: 140px; height: auto; }
+.home-pros__list img { width: auto; height: 60px; margin: 0 auto 12px; display: block; }
+.tip__icon { width: auto; height: 48px; }
+.home-find__map img { width: 100%; height: auto; border-radius: 18px; }
+.pos__map { width: 100%; max-width: 880px; height: auto; margin: 0 auto 32px; border-radius: var(--radius); }
+.soon__photo { flex: 0 0 160px; width: 160px; height: 200px; object-fit: cover; object-position: 30% 40%; border-radius: 12px; }
+.story__photo { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 40% center; border-radius: var(--radius); }
+@media (max-width: 600px) {
+  .bottle-img { height: 260px; }
+  .home-beer__ipa { width: 150px; height: 220px; }
+  .home-pros__list img { height: 48px; }
+}

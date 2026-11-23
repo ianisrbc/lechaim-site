@@ -21,14 +21,13 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 - Profil de dégustation, houblons, IBU et lieu de brassage de la Pale Ale
 - Nom d'Ianis et lien Rupture Brewing sur « Notre histoire » (à valider)
 - Points de vente, articles d'actus « Exemple d'article »
-- `assets/img/provisoire/` : photo du hero et photo de mousse extraites de la maquette (basse définition), à remplacer.
+- `assets/img/visuels/` : visuels fournis par Ianis (bouteilles, pictos, carte, motifs, photos). L'étiquette IPA porte un texte anglais et 6,2 % non confirmés.
 - Plan de Paris illustratif : les épingles ne correspondent à aucun point de vente réel.
 - Texte « Nos bières sont servies dans une sélection de bars… » : à confirmer quand les points de vente existeront.
 - IPA : degré, profil et date de sortie ; offre pros : zone et délais de livraison, tarifs, détail de l'accompagnement.
 - Événements de l'agenda
 - Adresse e-mail contact@lechaim-beer.com
 - Lien Instagram @lechaim_beer
-- Bouteille dessinée en vectoriel : à remplacer par une photo avec la vraie étiquette
 - Polices : Bebas Neue (gratuite) en remplacement de Bebas Neue Pro tant que la licence web n'est pas ajoutée
 
 ## Mise en ligne (GitHub Pages)
