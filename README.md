@@ -7,11 +7,22 @@ Ouvrir `index.html` dans un navigateur, ou lancer `python3 -m http.server` dans 
 
 ## Structure
 - `index.html` : page d'accueil (hero, Nos bières, Notre histoire, Actus, Nous trouver)
+- `bieres.html` : fiche Lechaim Pale Ale – Blonde (caractéristiques, ingrédients bilingues, texte de l'étiquette, service et accords)
+- `histoire.html` : sens de לחיים, le projet, les valeurs, l'identité visuelle
+- `actus.html` : liste d'actus + article « De l'étiquette à la bouteille »
+- `trouver.html` : points de vente (provisoires), contact professionnels, adresse
+- `mentions-legales.html` : modèle à compléter
+- En-tête et pied de page sont dupliqués dans chaque page : toute modification du menu se fait dans les 6 fichiers.
 - `assets/css/style.css` : charte (couleurs et polices en variables en haut du fichier)
 - `assets/js/main.js` : contrôle d'âge, menu mobile, carrousel
 - `CNAME` : domaine personnalisé pour GitHub Pages
 
-## Éléments provisoires (attribut `data-placeholder` ou commentaire PLACEHOLDER)
+## Éléments provisoires (attribut `data-placeholder`, classe `.ph` surlignée en jaune, ou commentaire PLACEHOLDER)
+- Mentions légales : raison sociale, forme et capital, RCS, SIRET, TVA, directeur de la publication, titulaire de la marque, crédits
+- Profil de dégustation, houblons, IBU et lieu de brassage de la Pale Ale
+- Nom d'Ianis et lien Rupture Brewing sur « Notre histoire » (à valider)
+- Points de vente, articles d'actus « Exemple d'article »
+- Cible du bouton « Acheter » (mène à trouver.html#acheter)
 - Cartes « Prochainement » dans Nos bières (Blonde et IPA non confirmées)
 - Cartes Actus
 - Adresse e-mail contact@lechaim-beer.com

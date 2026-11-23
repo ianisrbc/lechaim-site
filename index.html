@@ -46,7 +46,7 @@
 
   <header class="site-header" id="top">
     <div class="container site-header__inner">
-      <a class="logo" href="#top" aria-label="Lechaim, accueil">
+      <a class="logo" href="./" aria-label="Lechaim, accueil">
         <svg class="logo__star" aria-hidden="true"><use href="#star"/></svg>
         <span class="logo__name">LECHAIM</span>
         <span class="logo__he" lang="he" dir="rtl">לחיים</span>
@@ -55,11 +55,12 @@
         <span class="sr-only">Menu</span><span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="Navigation principale">
-        <a href="#bieres">Bières</a>
-        <a href="#histoire">Notre histoire</a>
-        <a href="#actus">Actus</a>
-        <a href="#trouver">Nous trouver</a>
-        <a class="btn btn--blue btn--sm" href="#trouver">Acheter</a>
+        <a href="bieres.html">Bières</a>
+        <a href="histoire.html">Notre histoire</a>
+        <a href="actus.html">Actus</a>
+        <a href="trouver.html">Nous trouver</a>
+        <!-- PLACEHOLDER : cible du bouton Acheter à définir (boutique en ligne, revendeurs…). Mène pour l'instant à « Nous trouver ». -->
+        <a class="btn btn--blue btn--sm" href="trouver.html#acheter">Acheter</a>
       </nav>
     </div>
   </header>
@@ -160,6 +161,7 @@
                   <dt>Ingrédients</dt>
                   <dd>Eau, <strong>orge</strong>, <strong>blé</strong>, houblons, levure, CO₂</dd>
                 </dl>
+                <p><a class="link-arrow" href="bieres.html">Voir la fiche</a></p>
               </div>
             </article>
 
@@ -171,7 +173,7 @@
               <div class="beer-card__body">
                 <p class="beer-card__style">Prochainement</p>
                 <h3>Nouvelle recette</h3>
-                <p>D'autres bières sont en préparation. Suivez-nous pour être les premiers à les goûter.</p>
+                <p>D'autres bières sont en préparation. Elles seront annoncées dans les actus.</p>
               </div>
             </article>
 
@@ -182,7 +184,7 @@
               <div class="beer-card__body">
                 <p class="beer-card__style">Prochainement</p>
                 <h3>Édition à venir</h3>
-                <p>Une nouvelle bière Lechaim rejoindra bientôt la Pale Ale.</p>
+                <p>Une prochaine bière Lechaim rejoindra la Pale Ale.</p>
               </div>
             </article>
 
@@ -203,14 +205,14 @@
         <div class="story__text">
           <p class="eyebrow">Notre histoire</p>
           <h2>Un nom qui se dit en levant son verre</h2>
-          <p><span lang="he" dir="rtl" class="he-inline">לחיים</span>, <em>lechaim</em>, c'est le toast que l'on porte autour d'une table juive : « À la vie ! ». Un mot simple, que l'on prononce pour une naissance, des retrouvailles ou un mardi soir entre amis.</p>
+          <p><span lang="he" dir="rtl" class="he-inline">לחיים</span>, <em>lechaim</em>, c'est le toast que l'on porte autour d'une table juive : « À la vie ! ». Un mot simple, que l'on prononce pour une naissance, un mariage ou des retrouvailles.</p>
           <p>Lechaim est née à Saint-Maur-des-Fossés de l'envie de faire une bière qui porte cette culture avec fierté et sans folklore. Une bière de partage, faite pour les moments où l'on se retrouve.</p>
           <ul class="story__values">
             <li><strong>Culture</strong> Une identité juive, contemporaine et assumée.</li>
             <li><strong>Partage</strong> Une bière pensée pour la table et pour les autres.</li>
-            <li><strong>Retrouvailles</strong> Les premières fois, les revoyures, les verres qui se lèvent.</li>
+            <li><strong>Retrouvailles</strong> Les premières fois, les grandes retrouvailles, les verres qui se lèvent ensemble.</li>
           </ul>
-          <a class="link-arrow" href="#histoire">En savoir plus</a>
+          <a class="link-arrow" href="histoire.html">En savoir plus</a>
         </div>
       </div>
     </section>
@@ -223,23 +225,26 @@
           <h2>Les dernières nouvelles</h2>
         </div>
         <div class="news__grid">
-          <!-- PLACEHOLDER : contenus d'actualité à rédiger -->
-          <article class="news-card" data-placeholder>
+          <article class="news-card">
             <p class="news-card__tag">Lancement</p>
             <h3>La Pale Ale arrive</h3>
-            <p>La première bière Lechaim est brassée. Les premiers points de vente seront annoncés ici.</p>
+            <p>La première bière Lechaim : une Pale Ale – Blonde à 4,2 % vol., en bouteille de 33 cl.</p>
+            <a class="link-arrow" href="bieres.html">Voir la fiche</a>
           </article>
-          <article class="news-card news-card--blue" data-placeholder>
-            <p class="news-card__tag">Events</p>
-            <h3>On trinque ensemble ?</h3>
-            <p>Dégustations et soirées à venir. Les dates seront publiées prochainement.</p>
-          </article>
-          <article class="news-card" data-placeholder>
+          <article class="news-card news-card--blue">
             <p class="news-card__tag">Coulisses</p>
             <h3>De l'étiquette à la bouteille</h3>
-            <p>Comment l'identité Lechaim a pris forme, du premier croquis à l'impression.</p>
+            <p>Comment l'identité bleu, crème et or a pris forme, des premières esquisses à l'impression.</p>
+            <a class="link-arrow link-arrow--gold" href="actus.html#etiquette">Lire</a>
+          </article>
+          <!-- PLACEHOLDER : à remplacer par une vraie annonce -->
+          <article class="news-card news-card--placeholder" data-placeholder>
+            <p class="news-card__tag">Events</p>
+            <h3>Dégustations à venir</h3>
+            <p>Les dates et les lieux des prochaines dégustations seront publiés ici.</p>
           </article>
         </div>
+        <p><a class="link-arrow" href="actus.html">Toutes les actus</a></p>
       </div>
     </section>
 
@@ -248,10 +253,11 @@
       <div class="container find__inner">
         <div>
           <p class="eyebrow eyebrow--gold">Nous trouver</p>
-          <h2>Où boire une Lechaim</h2>
-          <p>La liste des bars, caves et épiceries qui servent Lechaim arrive très bientôt. Vous êtes un établissement et souhaitez proposer notre bière ? Écrivez-nous.</p>
+          <h2>Où trouver une Lechaim</h2>
+          <p>La liste des bars, caves et épiceries qui proposent Lechaim sera publiée dès les premières livraisons. Vous tenez un établissement et souhaitez proposer notre bière ? Écrivez-nous.</p>
           <!-- PLACEHOLDER : adresse e-mail de contact à confirmer -->
           <a class="btn btn--cream" href="mailto:contact@lechaim-beer.com">Nous contacter</a>
+          <a class="link-arrow link-arrow--gold" href="trouver.html" style="margin-left:1.2rem">Points de vente</a>
         </div>
         <address class="find__card">
           <p class="find__name">LECHAIM</p>
@@ -269,15 +275,15 @@
         <span class="logo__he" lang="he" dir="rtl">לחיים</span>
       </div>
       <nav class="site-footer__nav" aria-label="Pied de page">
-        <a href="#bieres">Bières</a>
-        <a href="#histoire">Notre histoire</a>
-        <a href="#actus">Actus</a>
-        <a href="#trouver">Nous trouver</a>
+        <a href="bieres.html">Bières</a>
+        <a href="histoire.html">Notre histoire</a>
+        <a href="actus.html">Actus</a>
+        <a href="trouver.html">Nous trouver</a>
         <!-- PLACEHOLDER : compte Instagram de la maquette, à confirmer -->
         <a href="https://www.instagram.com/lechaim_beer/" rel="noopener">Instagram</a>
       </nav>
       <p class="site-footer__legal">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
-      <p class="site-footer__small">© <span id="year">2026</span> Lechaim · Saint-Maur-des-Fossés · <a href="#">Mentions légales</a></p>
+      <p class="site-footer__small">© <span id="year">2026</span> Lechaim · Saint-Maur-des-Fossés · <a href="mentions-legales.html">Mentions légales</a></p>
     </div>
   </footer>
 

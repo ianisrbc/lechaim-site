@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nous trouver · Lechaim</title>
+  <meta name="description" content="Où trouver la bière Lechaim : points de vente, contact et adresse à Saint-Maur-des-Fossés.">
+  <meta name="theme-color" content="#0B3DB8">
+  <link rel="canonical" href="https://lechaim-beer.com/trouver.html">
+  <meta property="og:title" content="Nous trouver · Lechaim">
+  <meta property="og:description" content="Où trouver la bière Lechaim : points de vente, contact et adresse à Saint-Maur-des-Fossés.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lechaim-beer.com/trouver.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo:wght@500;700&family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Symboles réutilisables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Étoile de David au trait, ouverte en bas (comme sur l'étiquette) -->
+    <symbol id="star" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M50 8 L86 70 L14 70 Z"/>
+        <path d="M14 30 L86 30 L56 82 M44 82 L14 30"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- Contrôle d'âge (exigé pour un site de boisson alcoolisée) -->
+  <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-title" hidden>
+    <div class="age-gate__card">
+      <svg class="age-gate__star" aria-hidden="true"><use href="#star"/></svg>
+      <p class="age-gate__logo">LECHAIM</p>
+      <h2 id="age-title">Avez-vous 18 ans ou plus ?</h2>
+      <p>Ce site présente des boissons alcoolisées. Son accès est réservé aux personnes majeures.</p>
+      <div class="age-gate__actions">
+        <button class="btn btn--blue" id="age-yes">Oui, j'ai 18 ans ou plus</button>
+        <a class="btn btn--ghost" href="https://www.alcool-info-service.fr/">Non</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="./" aria-label="Lechaim, accueil">
+        <svg class="logo__star" aria-hidden="true"><use href="#star"/></svg>
+        <span class="logo__name">LECHAIM</span>
+        <span class="logo__he" lang="he" dir="rtl">לחיים</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav">
+        <span class="sr-only">Menu</span><span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="bieres.html">Bières</a>
+        <a href="histoire.html">Notre histoire</a>
+        <a href="actus.html">Actus</a>
+        <a href="trouver.html" aria-current="page">Nous trouver</a>
+        <!-- PLACEHOLDER : cible du bouton Acheter à définir (boutique en ligne, revendeurs…). Mène pour l'instant à « Nous trouver ». -->
+        <a class="btn btn--blue btn--sm" href="trouver.html#acheter">Acheter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <p class="eyebrow eyebrow--gold">Nous trouver</p>
+        <h1>Où trouver une Lechaim</h1>
+        <p class="page-hero__lead">Bars, caves et épiceries : la liste des points de vente sera publiée ici dès les premières livraisons.</p>
+      </div>
+      <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 60 C 240 120, 480 0, 720 50 S 1200 110, 1440 40 L1440 120 L0 120 Z" fill="#F6F1E6"/>
+      </svg>
+    </section>
+
+    <section class="section" id="acheter">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Points de vente</p>
+          <h2>Bientôt près de chez vous</h2>
+        </div>
+        <!-- PLACEHOLDER : remplacer ces cartes par les vrais points de vente (nom, type, adresse, lien) -->
+        <div class="pos__grid">
+          <article class="pos-card" data-placeholder>
+            <p class="news-card__tag">Cave</p>
+            <h3><span class="ph" data-placeholder>Nom de l'établissement</span></h3>
+            <p><span class="ph" data-placeholder>Adresse, code postal, ville</span></p>
+          </article>
+          <article class="pos-card" data-placeholder>
+            <p class="news-card__tag">Bar</p>
+            <h3><span class="ph" data-placeholder>Nom de l'établissement</span></h3>
+            <p><span class="ph" data-placeholder>Adresse, code postal, ville</span></p>
+          </article>
+          <article class="pos-card" data-placeholder>
+            <p class="news-card__tag">Épicerie</p>
+            <h3><span class="ph" data-placeholder>Nom de l'établissement</span></h3>
+            <p><span class="ph" data-placeholder>Adresse, code postal, ville</span></p>
+          </article>
+        </div>
+        <p class="note"><span class="ph" data-placeholder>À définir : vente en ligne ou non, et cible du bouton « Acheter ».</span></p>
+      </div>
+    </section>
+
+    <section class="section find">
+      <div class="container find__inner">
+        <div>
+          <p class="eyebrow eyebrow--gold">Professionnels</p>
+          <h2>Proposer Lechaim</h2>
+          <p>Vous tenez un bar, un restaurant, une cave ou une épicerie et souhaitez proposer Lechaim Pale Ale ? Écrivez-nous, nous vous enverrons les conditions et les disponibilités.</p>
+          <!-- PLACEHOLDER : adresse e-mail de contact à confirmer -->
+          <a class="btn btn--cream" href="mailto:contact@lechaim-beer.com">Nous écrire</a>
+        </div>
+        <address class="find__card">
+          <p class="find__name">LECHAIM</p>
+          <p>5 boulevard de Créteil<br>94100 Saint-Maur-des-Fossés<br>France</p>
+          <p><a href="https://www.openstreetmap.org/search?query=5%20boulevard%20de%20Cr%C3%A9teil%2094100%20Saint-Maur-des-Foss%C3%A9s" rel="noopener">Voir sur la carte</a></p>
+          <p class="find__web">lechaim-beer.com</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="logo__name">LECHAIM</span>
+        <span class="logo__he" lang="he" dir="rtl">לחיים</span>
+      </div>
+      <nav class="site-footer__nav" aria-label="Pied de page">
+        <a href="bieres.html">Bières</a>
+        <a href="histoire.html">Notre histoire</a>
+        <a href="actus.html">Actus</a>
+        <a href="trouver.html">Nous trouver</a>
+        <!-- PLACEHOLDER : compte Instagram de la maquette, à confirmer -->
+        <a href="https://www.instagram.com/lechaim_beer/" rel="noopener">Instagram</a>
+      </nav>
+      <p class="site-footer__legal">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+      <p class="site-footer__small">© <span id="year">2026</span> Lechaim · Saint-Maur-des-Fossés · <a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

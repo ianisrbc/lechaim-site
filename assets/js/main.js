@@ -1,4 +1,4 @@
-// Lechaim · interactions de la page d'accueil
+// Lechaim · interactions communes à toutes les pages
 
 // Contrôle d'âge, mémorisé dans le navigateur
 (function () {
@@ -47,4 +47,5 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
   update();
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
