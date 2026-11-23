@@ -10,8 +10,8 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 - `index.html` : accueil (maquette finale d'Ianis) : hero, Nos bières, Notre histoire, offre pros, Où nous trouver
 - `bieres.html` : fiche Pale Ale – Blonde (4,2 %, 33 cl et fût 30 L), ingrédients bilingues, étiquette, service ; IPA bientôt disponible
 - `histoire.html` : sens de לחיים, le projet, les valeurs, l'identité, article « De l'étiquette à la bouteille »
-- `evenements.html` : cartes datées (provisoires) et événements pour les pros
-- `pros.html` : offre professionnelle et formulaire « Demander nos tarifs pro » (ouvre la messagerie, pas de serveur)
+- `evenements.html` : location de tireuse (solution clé en main, occasions, formulaire de devis qui ouvre la messagerie)
+- `pros.html` : offre professionnelle validée (1,80 € HT la bouteille 33 cl, 100 € HT le fût 30 L, livraison offerte, sans minimum) et formulaire « Devenons partenaires » (ouvre la messagerie vers hello@lechaim-beer.com, pas de serveur)
 - `trouver.html` : carte et liste des points de vente avec recherche (provisoire), contact, adresse
 - `bieres.html` a des filtres (Toutes, Disponibles, Bientôt, Formats pros)
 - `mentions-legales.html` : modèle à compléter
@@ -20,14 +20,13 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 ## Éléments provisoires (attribut `data-placeholder`, classe `.ph` surlignée en jaune, ou commentaire PLACEHOLDER)
 - Mentions légales : raison sociale, forme et capital, RCS, SIRET, TVA, directeur de la publication, titulaire de la marque, crédits
 - Profil de dégustation, houblons, IBU et lieu de brassage de la Pale Ale
-- Nom d'Ianis et lien Rupture Brewing sur « Notre histoire » (à valider)
-- Points de vente, articles d'actus « Exemple d'article »
+- Points de vente
 - `assets/img/visuels/` : visuels fournis par Ianis (bouteilles, pictos, carte, motifs, photos). Le texte « IPA / Bientôt disponible » est posé en HTML sur la bouteille vierge.
 - Plan de Paris illustratif : les épingles ne correspondent à aucun point de vente réel.
 - Texte « Nos bières sont servies dans une sélection de bars… » : à confirmer quand les points de vente existeront.
-- IPA : degré, profil et date de sortie ; offre pros : zone et délais de livraison, tarifs, détail de l'accompagnement.
-- Événements de l'agenda
-- Adresse e-mail contact@lechaim-beer.com
+- IPA : degré, profil et date de sortie.
+- Location de tireuse : tarif, caution, zone de livraison, quantité minimale.
+- `assets/img/provisoire/` : photos extraites des maquettes (tireuse, fût, occasions, table de fête, bouteille du héros pros), basse définition, à remplacer par des photos HD.
 - Lien Instagram @lechaim_beer
 - Polices : Bebas Neue (gratuite) en remplacement de Bebas Neue Pro tant que la licence web n'est pas ajoutée
 
