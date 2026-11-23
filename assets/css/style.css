@@ -614,3 +614,47 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
   .home-beer__ipa { width: 150px; height: 220px; }
   .home-pros__list img { height: 48px; }
 }
+
+/* ===== Accueil au plus près de l'image cible ===== */
+.home-hero { min-height: clamp(520px, 50vw, 700px); }
+.home-hero::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 34px; z-index: 2; background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 0 H1440 V6 C 1100 30, 700 0, 380 26 S 60 18, 0 30 Z' fill='%23F6F1E6'/%3E%3C/svg%3E");
+}
+.home-hero__photo { width: 64%; object-position: 40% center; }
+.home-hero__shape { width: 52%; }
+.home-hero h1 { font-size: clamp(3.4rem, 6.2vw, 6rem); max-width: min(560px, 38vw) !important; }
+.home-hero__inner { padding: 72px 0 150px; }
+
+.home-beers { position: relative; z-index: 3; padding: 0 0 72px; }
+.home-beers__inner { align-items: end; }
+.home-beer__visual { width: 230px; height: 470px; margin-top: -120px; align-items: end; }
+.home-beer__visual::after {
+  content: ""; position: absolute; left: 10%; right: 10%; bottom: -6px; height: 22px;
+  background: radial-gradient(ellipse at center, rgba(15, 28, 46, .32), transparent 70%); z-index: 0;
+}
+.home-beer__visual .bottle-img, .home-beer__visual .bottle { height: 440px; z-index: 1; }
+.blob { width: 250px; height: 280px; left: -40px; top: 120px; }
+.home-beer--soon .blob { left: auto; right: -50px; top: 150px; }
+.home-beer__rays { position: absolute; width: 90px; right: -40px; top: 40px; transform: rotate(35deg); }
+.home-beer__info { padding-bottom: 60px; }
+.home-beers__intro { padding-bottom: 60px; }
+.home-beer--soon { padding-left: 40px; }
+@media (max-width: 960px) {
+  .home-beer__visual { margin-top: 0; }
+}
+@media (max-width: 600px) {
+  .home-beer__visual { width: 160px; height: 330px; }
+  .home-beer__visual .bottle-img, .home-beer__visual .bottle { height: 300px; }
+  .blob { width: 170px; height: 190px; left: -20px; top: 90px; }
+  .home-beer--soon .blob { right: -20px; top: 100px; }
+  .home-beer__info, .home-beers__intro { padding-bottom: 0; }
+  .home-beer--soon { padding-left: 0; grid-template-columns: 160px; }
+}
+.home-story__star { width: 160px; }
+@media (max-width: 760px) {
+  .home-hero__photo { width: 100%; object-position: 60% center; }
+  .home-hero h1 { max-width: none !important; font-size: clamp(2.8rem, 12vw, 3.6rem); }
+  .home-hero__inner { padding: 28px 0 96px; }
+  .home-hero::before { height: 20px; }
+}
