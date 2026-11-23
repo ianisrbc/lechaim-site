@@ -72,3 +72,19 @@ document.querySelectorAll('[data-filter]').forEach(group => {
     if (empty) empty.hidden = shown > 0;
   });
 });
+
+// Recherche dans la liste des points de vente
+document.querySelectorAll('[data-pos-search]').forEach(input => {
+  const items = document.querySelectorAll('[data-pos-list] .pos');
+  const empty = document.querySelector('.pos-list__empty');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    items.forEach(li => {
+      const ok = !q || li.textContent.toLowerCase().includes(q);
+      li.hidden = !ok;
+      if (ok) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  });
+});
