@@ -90,40 +90,58 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <svg class="hero__ribbons hero__ribbons--page" aria-hidden="true"><use href="#ribbons"/></svg>
-      <svg class="page-hero__star" aria-hidden="true"><use href="#star"/></svg>
-      <div class="container page-hero__inner">
-        <p class="eyebrow eyebrow--gold">Événements</p>
-        <h1>Les prochains rendez-vous</h1>
-        <span class="rule" aria-hidden="true"></span>
-        <p class="page-hero__lead">Dégustations, soirées et privatisations : c'est ici que nous annonçons les occasions de découvrir Lechaim.</p>
-      </div>
-      <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 60 C 240 120, 480 0, 720 50 S 1200 110, 1440 40 L1440 120 L0 120 Z" fill="#F6F1E6"/>
+    <section class="page-head">
+      <svg class="page-head__wave" viewBox="0 0 600 300" preserveAspectRatio="xMaxYMin meet" aria-hidden="true">
+        <path d="M600 0 V190 C 540 240, 470 170, 400 210 C 330 250, 300 300, 210 290 C 300 240, 300 170, 380 120 C 460 70, 480 30, 470 0 Z" fill="#0B3DB8"/>
       </svg>
+      <div class="container page-head__inner">
+        <h1 class="title-xl page-head__title">Événements</h1>
+        <p class="page-head__lead">Dégustations, collaborations, soirées… Retrouvez ici tous nos prochains rendez-vous.</p>
+      </div>
     </section>
 
-    <section class="section">
+    <section class="section section--flush-top">
       <div class="container">
-        <img class="wide-photo" src="assets/img/visuels/terrasse.jpg" alt="Deux personnes trinquent avec une bière Lechaim en terrasse" width="1600" height="900" loading="lazy">
-        <div class="section__head">
-          <p class="eyebrow">Agenda</p>
-          <h2>À venir</h2>
-        </div>
-        <!-- PLACEHOLDER : remplacer par les vrais événements (date, lieu, description) -->
-        <div class="news__grid news__grid--four">
-          <article class="news-card news-card--placeholder" data-placeholder>
-            <p class="news-card__tag">Dégustation</p>
-            <h3><span class="ph" data-placeholder>Titre de l'événement</span></h3>
-            <p><span class="ph" data-placeholder>Date · lieu · horaires</span></p>
-            <p><span class="ph" data-placeholder>Description courte de la dégustation.</span></p>
+        <!-- PLACEHOLDER : remplacer par les vrais événements (date, titre, lieu, description, lien) -->
+        <div class="events">
+          <article class="event" data-placeholder>
+            <div class="event__visual">
+              <img src="assets/img/visuels/terrasse.jpg" alt="" width="800" height="560" loading="lazy">
+              <p class="event__date"><span><span class="ph" data-placeholder>Jour</span></span><strong><span class="ph" data-placeholder>00</span></strong><span><span class="ph" data-placeholder>Mois</span></span></p>
+            </div>
+            <div class="event__body">
+              <p class="event__kind">Dégustation</p>
+              <h2 class="event__title"><span class="ph" data-placeholder>Titre de l'événement</span></h2>
+              <p class="event__place"><span class="ph" data-placeholder>Lieu · horaires</span></p>
+              <p><span class="ph" data-placeholder>Description courte.</span></p>
+              <a class="tile__go event__go" href="#" aria-label="Détails de l'événement"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
           </article>
-          <article class="news-card news-card--placeholder" data-placeholder>
-            <p class="news-card__tag">Soirée</p>
-            <h3><span class="ph" data-placeholder>Titre de l'événement</span></h3>
-            <p><span class="ph" data-placeholder>Date · lieu · horaires</span></p>
-            <p><span class="ph" data-placeholder>Description courte de la soirée.</span></p>
+          <article class="event" data-placeholder>
+            <div class="event__visual">
+              <img src="assets/img/visuels/hero-verres.jpg" alt="" width="800" height="560" loading="lazy">
+              <p class="event__date"><span><span class="ph" data-placeholder>Jour</span></span><strong><span class="ph" data-placeholder>00</span></strong><span><span class="ph" data-placeholder>Mois</span></span></p>
+            </div>
+            <div class="event__body">
+              <p class="event__kind">Soirée</p>
+              <h2 class="event__title"><span class="ph" data-placeholder>Titre de l'événement</span></h2>
+              <p class="event__place"><span class="ph" data-placeholder>Lieu · horaires</span></p>
+              <p><span class="ph" data-placeholder>Description courte.</span></p>
+              <a class="tile__go event__go" href="#" aria-label="Détails de l'événement"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="event" data-placeholder>
+            <div class="event__visual">
+              <img src="assets/img/visuels/amis-trinquent.jpg" alt="" width="800" height="560" loading="lazy">
+              <p class="event__date"><span><span class="ph" data-placeholder>Jour</span></span><strong><span class="ph" data-placeholder>00</span></strong><span><span class="ph" data-placeholder>Mois</span></span></p>
+            </div>
+            <div class="event__body">
+              <p class="event__kind">Rencontre</p>
+              <h2 class="event__title"><span class="ph" data-placeholder>Titre de l'événement</span></h2>
+              <p class="event__place"><span class="ph" data-placeholder>Lieu · horaires</span></p>
+              <p><span class="ph" data-placeholder>Description courte.</span></p>
+              <a class="tile__go event__go" href="#" aria-label="Détails de l'événement"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
           </article>
         </div>
       </div>
