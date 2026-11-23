@@ -686,3 +686,55 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 .ipa-bottle__name { left: 0; right: 5%; }
 .ipa-bottle__badge { left: 25%; right: 30%; padding: 5px 2px; font-size: .58rem; letter-spacing: .03em; }
 @media (max-width: 600px) { .ipa-bottle__badge { left: 25%; right: 30%; font-size: .45rem; } }
+
+/* ===== Pages intérieures, maquettes d'Ianis ===== */
+.page-head { position: relative; overflow: hidden; padding: clamp(48px, 7vw, 88px) 0 clamp(36px, 5vw, 56px); }
+.page-head__wave { position: absolute; top: 0; right: 0; width: min(46vw, 560px); height: auto; pointer-events: none; }
+.page-head__inner { position: relative; }
+.page-head__title { font-size: clamp(3.4rem, 7vw, 6rem); margin-bottom: .25em; }
+.page-head__lead { max-width: 46ch; font-size: 1.1rem; color: var(--ink); margin-bottom: 1.6rem; }
+@media (max-width: 760px) { .page-head__wave { width: 52vw; opacity: .9; } .page-head__lead { max-width: 30ch; } }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip {
+  font: 600 .88rem/1 var(--f-ui); padding: .75em 1.3em; border-radius: 999px; cursor: pointer;
+  border: 1.5px solid var(--sand); background: #fffdf8; color: var(--ink); transition: background .15s, color .15s, border-color .15s;
+}
+.chip:hover { border-color: var(--blue); }
+.chip.is-active { background: var(--blue); border-color: var(--blue); color: var(--cream); }
+
+.section--flush-top { padding-top: 8px; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.tile { background: #fffdf8; border: 1px solid var(--sand); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.tile:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(15, 28, 46, .1); }
+.tile[hidden] { display: none; }
+.tile__visual { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 3.3; overflow: hidden; }
+.tile__visual--cream { background: var(--cream); }
+.tile__visual--green { background: #1F5B3A; }
+.tile__visual--blue { background: var(--blue); }
+.tile__shape { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tile__visual img:not(.tile__picto) { position: relative; height: 86%; width: auto; filter: drop-shadow(0 14px 16px rgba(0,0,0,.28)); transition: transform .25s; }
+.tile:hover .tile__visual img:not(.tile__picto) { transform: translateY(-4px) rotate(-2deg); }
+.tile__picto { position: relative; width: 44%; height: auto; }
+.ipa-bottle--tile { height: 86%; width: auto; }
+.ipa-bottle--tile .ipa-bottle__name { font-size: 2.6rem; }
+.tile__body { padding: 20px 22px 24px; display: grid; gap: 6px; }
+.tile__body p { margin: 0; color: var(--ink); }
+.tile__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.tile__name { font-size: 2rem; color: var(--ink); margin: 0; }
+.tile__go { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--blue); color: var(--blue); display: grid; place-items: center; transition: background .15s, color .15s; }
+.tile__go svg { width: 18px; height: 18px; }
+.tile__go:hover { background: var(--blue); color: var(--cream); }
+.tile__meta { font: 600 .82rem/1.3 var(--f-ui); color: #5b6473 !important; }
+.tile__badge { justify-self: start; margin-top: 6px; font: 700 .72rem/1 var(--f-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--blue); background: #e5ebfa; padding: .5em .9em; border-radius: 999px; }
+.tile__badge--soon { color: #1F5B3A; background: #e2efe6; }
+.tiles__empty { color: var(--ink); }
+@media (max-width: 960px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .tiles { grid-template-columns: 1fr; } }
+.tile__visual > img:not(.tile__picto), .ipa-bottle--tile {
+  position: absolute; bottom: 6%; left: 50%; height: 88%; width: auto; transform: translateX(-50%);
+}
+.ipa-bottle--tile { aspect-ratio: 420 / 860; }
+.ipa-bottle--tile img { filter: drop-shadow(0 14px 16px rgba(0,0,0,.28)); }
+.tile:hover .tile__visual > img:not(.tile__picto), .tile:hover .ipa-bottle--tile { transform: translateX(-50%) translateY(-4px) rotate(-2deg); }
+.tile__visual > img:not(.tile__picto), .ipa-bottle--tile { transition: transform .25s; }

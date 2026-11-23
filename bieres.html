@@ -90,21 +90,70 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <svg class="hero__ribbons hero__ribbons--page" aria-hidden="true"><use href="#ribbons"/></svg>
-      <svg class="page-hero__star" aria-hidden="true"><use href="#star"/></svg>
-      <div class="container page-hero__inner">
-        <p class="eyebrow eyebrow--gold">Nos bières</p>
-        <h1>Lechaim Pale Ale – Blonde</h1>
-        <span class="rule" aria-hidden="true"></span>
-        <p class="page-hero__lead">Des recettes actuelles, équilibrées et brassées avec exigence. La Pale Ale est blonde, fraîche et équilibrée.</p>
-      </div>
-      <svg class="wave wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 60 C 240 120, 480 0, 720 50 S 1200 110, 1440 40 L1440 120 L0 120 Z" fill="#F6F1E6"/>
+    <section class="page-head">
+      <svg class="page-head__wave" viewBox="0 0 600 300" preserveAspectRatio="xMaxYMin meet" aria-hidden="true">
+        <path d="M600 0 V190 C 540 240, 470 170, 400 210 C 330 250, 300 300, 210 290 C 300 240, 300 170, 380 120 C 460 70, 480 30, 470 0 Z" fill="#0B3DB8"/>
       </svg>
+      <div class="container page-head__inner">
+        <h1 class="title-xl page-head__title">Nos bières</h1>
+        <p class="page-head__lead">Des bières craft modernes, fraîches et pleines de caractère. Des recettes actuelles, équilibrées et brassées avec exigence.</p>
+        <div class="chips" role="group" aria-label="Filtrer les bières" data-filter>
+          <button class="chip is-active" data-f="all" aria-pressed="true">Toutes les bières</button>
+          <button class="chip" data-f="dispo" aria-pressed="false">Disponibles</button>
+          <button class="chip" data-f="bientot" aria-pressed="false">Bientôt</button>
+          <button class="chip" data-f="pro" aria-pressed="false">Formats pros</button>
+        </div>
+      </div>
     </section>
 
-    <section class="section">
+    <section class="section section--flush-top">
+      <div class="container">
+        <div class="tiles" data-tiles>
+          <article class="tile" data-tags="dispo">
+            <a class="tile__visual tile__visual--cream" href="#pale-ale">
+              <svg class="tile__shape" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H150 C 120 80, 200 120, 150 200 C 120 250, 60 260, 0 300 Z" fill="#0B3DB8"/><path d="M400 300 H250 C 300 250, 330 190, 400 170 Z" fill="#0B3DB8"/></svg>
+              <img src="assets/img/visuels/pale-ale-bouteille.webp" alt="Bouteille Lechaim Pale Ale – Blonde" width="420" height="849" loading="lazy">
+            </a>
+            <div class="tile__body">
+              <div class="tile__row"><h2 class="tile__name">Pale Ale</h2><a class="tile__go" href="#pale-ale" aria-label="Voir la fiche Pale Ale"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+              <p class="tile__meta">4,2 % vol. — Blonde · 33 cl et fût 30 L</p>
+              <p>Blonde, fraîche et équilibrée.</p>
+              <span class="tile__badge">Disponible</span>
+            </div>
+          </article>
+          <article class="tile" data-tags="bientot">
+            <a class="tile__visual tile__visual--green" href="#ipa">
+              <svg class="tile__shape" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path d="M400 0 V170 C 330 200, 300 140, 250 170 C 200 200, 220 260, 170 300 H400 Z" fill="#F6F1E6" opacity=".9"/></svg>
+              <div class="ipa-bottle ipa-bottle--tile" role="img" aria-label="Bouteille Lechaim IPA, bientôt disponible">
+                <img src="assets/img/visuels/bouteille-ipa.webp" alt="" width="420" height="860" loading="lazy">
+                <span class="ipa-bottle__name">IPA</span>
+              </div>
+            </a>
+            <div class="tile__body">
+              <div class="tile__row"><h2 class="tile__name">IPA</h2><a class="tile__go" href="#ipa" aria-label="En savoir plus sur l'IPA"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+              <p class="tile__meta"><span class="ph" data-placeholder>Degré à préciser</span> — IPA</p>
+              <p>La prochaine bière Lechaim.</p>
+              <span class="tile__badge tile__badge--soon">Bientôt disponible</span>
+            </div>
+          </article>
+          <article class="tile tile--pro" data-tags="pro">
+            <a class="tile__visual tile__visual--blue" href="pros.html">
+              <svg class="tile__shape" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 300 V190 C 70 160, 110 230, 170 210 C 240 185, 250 120, 330 130 C 370 135, 390 150, 400 160 V300 Z" fill="#F6F1E6" opacity=".12"/></svg>
+              <img class="tile__picto" src="assets/img/visuels/picto-futs.png" alt="" loading="lazy">
+            </a>
+            <div class="tile__body">
+              <div class="tile__row"><h2 class="tile__name">Pour les pros</h2><a class="tile__go" href="pros.html" aria-label="Devenir professionnel"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+              <p class="tile__meta">Fûts 30 L &amp; bouteilles 33 cl</p>
+              <p>Bars, restaurants, cavistes : la Pale Ale à la pression ou en bouteille.</p>
+              <span class="tile__badge">Devenir professionnel</span>
+            </div>
+          </article>
+        </div>
+        <p class="tiles__empty" hidden>Aucune bière dans cette catégorie pour le moment.</p>
+      </div>
+    </section>
+
+    <section class="section" id="pale-ale">
       <div class="container product">
         <div class="product__visual">
           <img class="motif-rays" src="assets/img/visuels/motif-rayons.png" alt="" aria-hidden="true">
@@ -186,7 +235,7 @@
       </div>
     </section>
 
-    <section class="section section--tight">
+    <section class="section section--tight" id="ipa">
       <div class="container soon">
         <img class="soon__bottle" src="assets/img/visuels/bouteille-ipa.webp" alt="" width="420" height="860" loading="lazy">
         <div>

@@ -49,3 +49,26 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
 
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+// Filtres (page Nos bières)
+document.querySelectorAll('[data-filter]').forEach(group => {
+  const tiles = document.querySelectorAll('[data-tiles] .tile');
+  const empty = document.querySelector('.tiles__empty');
+  group.addEventListener('click', e => {
+    const btn = e.target.closest('.chip');
+    if (!btn) return;
+    group.querySelectorAll('.chip').forEach(c => {
+      const on = c === btn;
+      c.classList.toggle('is-active', on);
+      c.setAttribute('aria-pressed', String(on));
+    });
+    const f = btn.dataset.f;
+    let shown = 0;
+    tiles.forEach(t => {
+      const ok = f === 'all' || t.dataset.tags.split(' ').includes(f);
+      t.hidden = !ok;
+      if (ok) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  });
+});
