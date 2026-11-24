@@ -90,17 +90,32 @@ document.querySelectorAll('[data-pos-search]').forEach(input => {
 });
 
 // Formulaires Professionnels / Événements : ouvrent la messagerie avec la demande pré-remplie
-document.querySelectorAll('[data-mail-form]').forEach(form => {
+// Envoi via FormSubmit (formsubmit.co) vers hello@lechaim-beer.com.
+// La toute première demande déclenche un e-mail d'activation à valider sur hello@lechaim-beer.com.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@lechaim-beer.com';
+document.querySelectorAll('[data-send-form]').forEach(form => {
   const err = form.querySelector('.mform__error');
-  form.addEventListener('submit', e => {
+  const status = form.querySelector('.mform__status');
+  const btn = form.querySelector('[type="submit"]');
+  const show = (msg, bad) => { status.textContent = msg; status.hidden = false; status.classList.toggle('is-error', !!bad); };
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const fields = [...form.elements].filter(el => el.name);
-    const ok = fields.every(el => el.checkValidity() && (!el.required || el.value.trim()));
-    err.hidden = ok;
-    if (!ok) { fields.find(el => !el.checkValidity() || (el.required && !el.value.trim())).focus(); return; }
-    const body = fields.filter(el => el.name !== 'Message').map(el => `${el.name} : ${el.value}`).join('\n')
-      + '\n\n' + (form.elements.Message ? form.elements.Message.value : '');
-    const who = (form.elements['Établissement'] || form.elements.Nom).value.trim();
-    location.href = 'mailto:hello@lechaim-beer.com?subject=' + encodeURIComponent(form.dataset.subject + ' – ' + who) + '&body=' + encodeURIComponent(body);
+    const bad = fields.find(el => !el.checkValidity() || (el.required && !el.value.trim()));
+    err.hidden = !bad;
+    if (bad) { bad.focus(); return; }
+    const data = Object.fromEntries(fields.map(el => [el.name, el.value.trim()]));
+    const who = data['Établissement'] || data['Nom'];
+    const payload = { ...data, _subject: `${form.dataset.subject} – ${who}`, _replyto: data['E-mail'], _template: 'table', _captcha: 'false' };
+    btn.disabled = true; show('Envoi en cours…');
+    try {
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
+      form.reset();
+      show('Merci, votre demande a bien été envoyée. Nous vous répondons rapidement.');
+    } catch (_) {
+      show("L'envoi n'a pas fonctionné. Écrivez-nous directement à hello@lechaim-beer.com.", true);
+    } finally { btn.disabled = false; }
   });
 });
