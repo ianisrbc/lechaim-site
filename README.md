@@ -15,6 +15,8 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 - Page « Où nous trouver » retirée le 23/11 (pas encore de points de vente) ; elle reste dans l’historique git.
 - `bieres.html` a des filtres (Toutes, Disponibles, Bientôt, Formats pros)
 - `mentions-legales.html` : modèle à compléter
+- `biere-casher.html` : Lechaim et la cacherout (mentions validées uniquement, FAQ), liée depuis le pied de page
+- `sitemap.xml` et `robots.txt` : à mettre à jour si une page est ajoutée. Données structurées (JSON-LD) dans index, bieres, evenements et biere-casher.
 - En-tête et pied de page sont dupliqués dans chaque page.
 
 ## Éléments provisoires (attribut `data-placeholder`, classe `.ph` surlignée en jaune, ou commentaire PLACEHOLDER)
