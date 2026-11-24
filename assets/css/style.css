@@ -1089,3 +1089,7 @@ html, body { overflow-x: hidden; }
 .mform-done__text { color: var(--ink); max-width: 44ch; margin: 0 0 8px; }
 .mform-done__text a { color: var(--blue); font-weight: 600; }
 .mform-done__text a { white-space: nowrap; }
+/* Formulaires : bouton qui tourne pendant l'envoi */
+.mform__submit.is-sending { cursor: progress; }
+.mform__submit.is-sending::after { content: ""; width: 1em; height: 1em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: mform-spin .8s linear infinite; }
+@keyframes mform-spin { to { transform: rotate(360deg); } }
