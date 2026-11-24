@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo:wght@500;700&family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026112304">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026112401">
 </head>
 <body>
 
@@ -59,6 +59,7 @@
     <symbol id="i-cloche" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 0 1 32 0z"/><path d="M4 38h40M24 18v-4M21 14h6"/></g></symbol>
     <symbol id="i-bottles" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M14 4h4v9c0 3 4 5 4 9v22H10V22c0-4 4-6 4-9z"/><path d="M30 4h4v9c0 3 4 5 4 9v22H26V22c0-4 4-6 4-9z"/><path d="M10 28h12M26 28h12"/></g></symbol>
     <symbol id="i-shop" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 8h36l3 10H3z"/><path d="M3 18c0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0"/><path d="M7 24v18h34V24M12 42V30h10v12M27 30h9v7h-9z"/></g></symbol>
+    <symbol id="i-pro" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M8 22v20h32V22"/><path d="M6 6h36l4 12a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0z"/><path d="M19 42V31h10v11M4 42h40"/></g></symbol>
     <symbol id="i-pin" viewBox="0 0 22 28"><path d="M11 0C5 0 0 5 0 11c0 8 11 17 11 17s11-9 11-17C22 5 17 0 11 0z" fill="currentColor"/><circle cx="11" cy="11" r="4" fill="#efe3cc"/></symbol>
   </svg>
 
@@ -95,9 +96,9 @@
   </header>
 
   <main>
-    <section class="bhero ">
+    <section class="bhero bhero--flat">
       <div class="bhero__visual"><!-- PLACEHOLDER : photo extraite de la maquette, basse définition. À remplacer par une photo HD de la bouteille. -->
-        <img src="assets/img/provisoire/pros-hero.jpg" alt="Bouteille de Lechaim Pale Ale – Blonde posée sur une pierre au soleil" width="768" height="796" data-placeholder></div>
+        <img src="assets/img/provisoire/pros-hero.jpg" alt="Bouteille de Lechaim Pale Ale – Blonde posée sur une pierre au soleil" width="768" height="680" data-placeholder></div>
       <svg class="bhero__shape" viewBox="0 0 800 600" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 0 H640 C 700 60, 740 120, 720 200 C 700 280, 600 330, 600 420 C 600 490, 640 540, 690 600 H0 Z" fill="#0B3DB8"/>
       </svg>
@@ -179,7 +180,7 @@
           <p class="contact-split__lead">Une question, un projet, une dégustation ? Échangeons simplement et trouvons ensemble la meilleure offre pour votre établissement.</p>
           <a class="contact-split__mail" href="mailto:hello@lechaim-beer.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>hello@lechaim-beer.com</a>
         </div>
-        <form class="mform" data-mail-form data-subject="Demande partenaire" novalidate>
+        <form class="mform" data-send-form data-subject="Demande partenaire" novalidate>
           <label><span class="sr-only">Établissement *</span><input name="Établissement" placeholder="Établissement *" required autocomplete="organization"></label>
           <label><span class="sr-only">Nom *</span><input name="Nom" placeholder="Nom *" required autocomplete="name"></label>
           <label><span class="sr-only">E-mail *</span><input name="E-mail" type="email" placeholder="E-mail *" required autocomplete="email"></label>
@@ -197,7 +198,7 @@
           <label class="mform__full"><span class="sr-only">Message</span><textarea name="Message" rows="4" placeholder="Message"></textarea></label>
           <p class="mform__error mform__full" role="alert" hidden>Merci de remplir les champs marqués d'une étoile, avec une adresse e-mail valide.</p>
           <button class="btn btn--blue btn--arrow btn--display mform__submit" type="submit">Envoyer ma demande</button>
-          <p class="mform__note mform__full">Le bouton ouvre votre messagerie avec votre demande prête à être envoyée à hello@lechaim-beer.com.</p>
+          <p class="mform__status mform__full" role="status" hidden></p>
         </form>
       </div>
     </section>
@@ -223,6 +224,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2026112304"></script>
+  <script src="assets/js/main.js?v=2026112401"></script>
 </body>
 </html>

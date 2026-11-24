@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo:wght@500;700&family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026112304">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026112401">
 </head>
 <body>
 
@@ -59,6 +59,7 @@
     <symbol id="i-cloche" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 0 1 32 0z"/><path d="M4 38h40M24 18v-4M21 14h6"/></g></symbol>
     <symbol id="i-bottles" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M14 4h4v9c0 3 4 5 4 9v22H10V22c0-4 4-6 4-9z"/><path d="M30 4h4v9c0 3 4 5 4 9v22H26V22c0-4 4-6 4-9z"/><path d="M10 28h12M26 28h12"/></g></symbol>
     <symbol id="i-shop" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 8h36l3 10H3z"/><path d="M3 18c0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0 0 4 7 4 7 0"/><path d="M7 24v18h34V24M12 42V30h10v12M27 30h9v7h-9z"/></g></symbol>
+    <symbol id="i-pro" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M8 22v20h32V22"/><path d="M6 6h36l4 12a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1-11 0z"/><path d="M19 42V31h10v11M4 42h40"/></g></symbol>
     <symbol id="i-pin" viewBox="0 0 22 28"><path d="M11 0C5 0 0 5 0 11c0 8 11 17 11 17s11-9 11-17C22 5 17 0 11 0z" fill="currentColor"/><circle cx="11" cy="11" r="4" fill="#efe3cc"/></symbol>
   </svg>
 
@@ -106,14 +107,13 @@
           <button class="chip is-active" data-f="all" aria-pressed="true">Toutes les bières</button>
           <button class="chip" data-f="dispo" aria-pressed="false">Disponibles</button>
           <button class="chip" data-f="bientot" aria-pressed="false">Bientôt</button>
-          <button class="chip" data-f="pro" aria-pressed="false">Formats pros</button>
         </div>
       </div>
     </section>
 
     <section class="section section--flush-top">
       <div class="container">
-        <div class="tiles" data-tiles>
+        <div class="tiles tiles--two" data-tiles>
           <article class="tile" data-tags="dispo">
             <a class="tile__visual tile__visual--cream" href="#pale-ale">
               <svg class="tile__shape" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H150 C 120 80, 200 120, 150 200 C 120 250, 60 260, 0 300 Z" fill="#0B3DB8"/><path d="M400 300 H250 C 300 250, 330 190, 400 170 Z" fill="#0B3DB8"/></svg>
@@ -136,21 +136,9 @@
             </a>
             <div class="tile__body">
               <div class="tile__row"><h2 class="tile__name">IPA</h2><a class="tile__go" href="#ipa" aria-label="En savoir plus sur l'IPA"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-              <p class="tile__meta"><span class="ph" data-placeholder>Degré à préciser</span> — IPA</p>
+              <p class="tile__meta">IPA · À venir</p>
               <p>La prochaine bière Lechaim.</p>
               <span class="tile__badge tile__badge--soon">Bientôt disponible</span>
-            </div>
-          </article>
-          <article class="tile tile--pro" data-tags="pro">
-            <a class="tile__visual tile__visual--blue" href="pros.html">
-              <svg class="tile__shape" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 300 V190 C 70 160, 110 230, 170 210 C 240 185, 250 120, 330 130 C 370 135, 390 150, 400 160 V300 Z" fill="#F6F1E6" opacity=".12"/></svg>
-              <img class="tile__picto" src="assets/img/visuels/picto-futs.png" alt="" loading="lazy">
-            </a>
-            <div class="tile__body">
-              <div class="tile__row"><h2 class="tile__name">Pour les pros</h2><a class="tile__go" href="pros.html" aria-label="Offre professionnels"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-              <p class="tile__meta">Fûts 30 L &amp; bouteilles 33 cl</p>
-              <p>Bars, restaurants, cavistes : la Pale Ale à la pression ou en bouteille.</p>
-              <span class="tile__badge">Devenir partenaire</span>
             </div>
           </article>
         </div>
@@ -168,16 +156,17 @@
           <p class="beer-card__style">Pale Ale – Blonde</p>
           <h2>Blonde, fraîche et équilibrée</h2>
           <p class="beer-card__meta"><span>4,2 % vol.</span><span>33 cl</span></p>
-          <p class="lead">Une bière rafraîchissante pour les premières fois, les grandes retrouvailles et les verres qui se lèvent ensemble.</p>
-          <p>Lechaim Pale Ale est une bière de couleur blonde, à 4,2 % vol. Son degré modéré en fait une bière qui accompagne facilement un repas.</p>
-          <p><span class="ph" data-placeholder>À compléter : profil de dégustation (nez, bouche, amertume), houblons utilisés, IBU, lieu de brassage.</span></p>
+          <p class="lead">Blonde légère, brassée avec deux houblons : le Chinook et surtout l'Amarillo. L'Amarillo est un houblon très aromatique qui donne à la bière des notes florales et fruitées.</p>
+          <p>Cette bière à 4,2 % possède un superbe nez et, en bouche, des arômes délicats.</p>
 
           <dl class="specs">
             <div><dt>Style</dt><dd>Pale Ale – Blonde</dd></div>
             <div><dt>Alcool</dt><dd>4,2 % vol.</dd></div>
+            <div><dt>Amertume</dt><dd>20 IBU</dd></div>
+            <div><dt>Couleur</dt><dd>10 EBC</dd></div>
+            <div><dt>Houblons</dt><dd>Chinook, Amarillo</dd></div>
             <div><dt>Formats</dt><dd>Bouteille 33 cl · fût 30 L</dd></div>
             <div><dt>Service conseillé</dt><dd>Entre 6 et 8 °C</dd></div>
-            <div><dt>Code EAN</dt><dd>3760389620219</dd></div>
           </dl>
         </div>
       </div>
@@ -238,7 +227,7 @@
         <img class="soon__bottle" src="assets/img/visuels/bouteille-ipa.webp" alt="" width="420" height="860" loading="lazy">
         <div>
           <h2>IPA · Bientôt disponible</h2>
-          <p>La Pale Ale est la première bière Lechaim. Une IPA la rejoindra prochainement. <span class="ph" data-placeholder>Degré, profil et date de sortie à préciser.</span></p>
+          <p>La Pale Ale est la première bière Lechaim. Une IPA la rejoindra prochainement.</p>
         </div>
       </div>
     </section>
@@ -264,6 +253,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2026112304"></script>
+  <script src="assets/js/main.js?v=2026112401"></script>
 </body>
 </html>
