@@ -1081,3 +1081,11 @@ html, body { overflow-x: hidden; }
 .mform label, .mform input { min-width: 0; max-width: 100%; }
 .mform input[type="date"] { -webkit-appearance: none; appearance: none; display: block; min-height: 48px; }
 @media (max-width: 760px) { .home-beer .blob { left: 0; } }
+/* Formulaires : confirmation d'envoi bien visible */
+.mform[hidden], .mform-done[hidden] { display: none; }
+.mform-done { text-align: center; background: #fffdf8; border: 1.5px solid var(--gold); border-radius: var(--radius); padding: 40px 28px; display: grid; justify-items: center; gap: 10px; outline: none; }
+.mform-done__icon { width: 64px; height: 64px; border-radius: 50%; background: var(--blue); color: var(--cream); display: grid; place-items: center; font: 700 2rem/1 var(--f-ui); margin-bottom: 6px; }
+.mform-done__title { font: 400 clamp(1.8rem, 3vw, 2.4rem)/1.05 var(--f-display); text-transform: uppercase; color: var(--blue); margin: 0; }
+.mform-done__text { color: var(--ink); max-width: 44ch; margin: 0 0 8px; }
+.mform-done__text a { color: var(--blue); font-weight: 600; }
+.mform-done__text a { white-space: nowrap; }

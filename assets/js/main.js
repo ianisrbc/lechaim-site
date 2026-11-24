@@ -113,7 +113,22 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
       const j = await r.json().catch(() => ({}));
       if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
       form.reset();
-      show('Merci, votre demande a bien été envoyée. Nous vous répondons rapidement.');
+      status.hidden = true;
+      let done = form.parentElement.querySelector('.mform-done');
+      if (!done) {
+        done = document.createElement('div');
+        done.className = 'mform-done';
+        done.setAttribute('role', 'status');
+        done.setAttribute('tabindex', '-1');
+        done.innerHTML = '<span class="mform-done__icon" aria-hidden="true">✓</span>'
+          + '<p class="mform-done__title">Merci, votre message a bien été envoyé !</p>'
+          + '<p class="mform-done__text">Nous vous répondons rapidement à l\'adresse indiquée. Pour toute urgence : <a href="mailto:hello@lechaim-beer.com">hello@lechaim-beer.com</a></p>'
+          + '<button type="button" class="btn btn--outline mform-done__again">Envoyer un autre message</button>';
+        form.after(done);
+        done.querySelector('.mform-done__again').addEventListener('click', () => { done.hidden = true; form.hidden = false; form.querySelector('input, select, textarea').focus(); });
+      }
+      form.hidden = true; done.hidden = false; done.focus();
+      done.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } catch (_) {
       show("L'envoi n'a pas fonctionné. Écrivez-nous directement à hello@lechaim-beer.com.", true);
     } finally { btn.disabled = false; }
