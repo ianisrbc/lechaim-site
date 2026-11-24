@@ -525,6 +525,7 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 @media (max-width: 960px) {
   .home-beers__inner { grid-template-columns: 1fr 1fr; }
   .home-beers__intro { grid-column: 1 / -1; }
+  .home-beers__intro p { max-width: 60ch; }
 }
 @media (max-width: 600px) {
   .home-beers__inner { grid-template-columns: 1fr; }
