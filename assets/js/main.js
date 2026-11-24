@@ -107,9 +107,17 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
     const data = Object.fromEntries(fields.map(el => [el.name, el.value.trim()]));
     const who = data['Établissement'] || data['Nom'];
     const payload = { ...data, _subject: `${form.dataset.subject} – ${who}`, _replyto: data['E-mail'], _template: 'table', _captcha: 'false' };
-    btn.disabled = true; show('Envoi en cours…');
+    btn.disabled = true; btn.classList.add('is-sending');
+    show('Envoi en cours…');
+    // FormSubmit (service gratuit) répond parfois lentement : on prévient au bout de 6 s, on abandonne au bout de 45 s.
+    const slow = setTimeout(() => show("Envoi en cours… le service de messagerie met un peu plus de temps que d'habitude, merci de patienter."), 6000);
+    const ctrl = new AbortController();
+    const stop = setTimeout(() => ctrl.abort(), 45000);
     try {
-      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
+      // FormData (et non JSON) : pas de requête préalable CORS, donc un aller-retour réseau de moins.
+      const body = new FormData();
+      Object.entries(payload).forEach(([k, v]) => body.append(k, v));
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body, signal: ctrl.signal });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
       form.reset();
@@ -131,6 +139,6 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
       done.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } catch (_) {
       show("L'envoi n'a pas fonctionné. Écrivez-nous directement à hello@lechaim-beer.com.", true);
-    } finally { btn.disabled = false; }
+    } finally { clearTimeout(slow); clearTimeout(stop); btn.disabled = false; btn.classList.remove('is-sending'); }
   });
 });
