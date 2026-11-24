@@ -113,12 +113,11 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
     // Filet de sécurité : si la réponse tarde, on prévient au bout de 6 s et on attend sans couper.
     const slow = setTimeout(() => show("Envoi en cours… merci de patienter quelques secondes."), 6000);
     try {
-      // FormData : pas de requête préalable CORS.
-      const body = new FormData();
-      Object.entries(payload).forEach(([k, v]) => body.append(k, v));
-      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body });
+      // JSON en UTF-8 (format recommandé par Web3Forms) : les noms de champs accentués (« Établissement »,
+      // « Date de l'événement ») arrivent intacts, alors qu'en FormData ils étaient mal encodés ou ralentissaient l'envoi.
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
+      if (String(j.success) !== 'true' && !(r.ok && j.success === undefined)) throw new Error(j.message || r.status);
       form.reset();
       status.hidden = true;
       let done = form.parentElement.querySelector('.mform-done');
@@ -136,7 +135,8 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
       }
       form.hidden = true; done.hidden = false; done.focus();
       done.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } catch (_) {
+    } catch (e) {
+      console.warn('Envoi du formulaire :', e && e.message);
       show("L'envoi n'a pas fonctionné. Écrivez-nous directement à hello@lechaim-beer.com.", true);
     } finally { clearTimeout(slow); btn.disabled = false; btn.classList.remove('is-sending'); }
   });
