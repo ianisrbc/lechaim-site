@@ -1047,3 +1047,24 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 .celebr__photo { -webkit-mask: none; mask: none; border-radius: 0 240px 240px 0 / 0 50% 50% 0; overflow: hidden; }
 @media (max-width: 860px) { .celebr__photo { border-radius: 0; } }
 @media (max-width: 860px) { .bhero__visual img { object-position: 75% 50%; } }
+
+/* ===== Recette visuelle du 24/11 ===== */
+/* Accueil : le héros commence directement sous l'en-tête, sans liseré crème */
+.home-hero::before { display: none; }
+/* Accueil : rayons dorés de l'IPA sortis de la photo */
+@media (min-width: 961px) { .home-beer--soon .home-beer__rays { top: 150px; right: -30px; } }
+/* Nos bières : deux fiches sur toute la largeur */
+.tiles--two { max-width: none; }
+.tiles--two .tile__visual { aspect-ratio: 16 / 10; }
+@media (max-width: 600px) { .tiles--two .tile__visual { aspect-ratio: 4 / 3.3; } }
+/* Nos bières : caractéristiques en 3 colonnes (plus de case orpheline) */
+.specs:not(.specs--two) { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 600px) { .specs:not(.specs--two) { grid-template-columns: 1fr 1fr; } }
+.nowrap { white-space: nowrap; }
+/* Notre histoire : étoile décorative masquée en mobile (elle créait un grand vide) */
+@media (max-width: 860px) { .why__star { display: none; } }
+/* Formulaires : champs alignés quand un seul porte un libellé visible */
+.mform label { align-content: end; }
+/* Mentions légales : vagues retirées du bandeau, étoile hors du titre en mobile */
+.hero__ribbons--page { display: none; }
+@media (max-width: 760px) { .page-hero__star { display: none; } }
