@@ -109,15 +109,13 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
     const payload = { ...data, _subject: `${form.dataset.subject} – ${who}`, _replyto: data['E-mail'], _template: 'table', _captcha: 'false' };
     btn.disabled = true; btn.classList.add('is-sending');
     show('Envoi en cours…');
-    // FormSubmit (service gratuit) répond parfois lentement : on prévient au bout de 6 s, on abandonne au bout de 45 s.
-    const slow = setTimeout(() => show("Envoi en cours… le service de messagerie met un peu plus de temps que d'habitude, merci de patienter."), 6000);
-    const ctrl = new AbortController();
-    const stop = setTimeout(() => ctrl.abort(), 45000);
+    // FormSubmit (service gratuit) répond parfois très lentement (jusqu'à une minute) : on prévient au bout de 6 s et on attend la réponse sans couper.
+    const slow = setTimeout(() => show("Envoi en cours… le service de messagerie peut mettre jusqu'à une minute, merci de ne pas fermer la page."), 6000);
     try {
       // FormData (et non JSON) : pas de requête préalable CORS, donc un aller-retour réseau de moins.
       const body = new FormData();
       Object.entries(payload).forEach(([k, v]) => body.append(k, v));
-      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body, signal: ctrl.signal });
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
       form.reset();
@@ -139,6 +137,6 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
       done.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } catch (_) {
       show("L'envoi n'a pas fonctionné. Écrivez-nous directement à hello@lechaim-beer.com.", true);
-    } finally { clearTimeout(slow); clearTimeout(stop); btn.disabled = false; btn.classList.remove('is-sending'); }
+    } finally { clearTimeout(slow); btn.disabled = false; btn.classList.remove('is-sending'); }
   });
 });
