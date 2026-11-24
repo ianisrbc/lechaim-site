@@ -91,8 +91,8 @@ document.querySelectorAll('[data-pos-search]').forEach(input => {
 
 // Formulaires Professionnels / Événements : ouvrent la messagerie avec la demande pré-remplie
 // Envoi via FormSubmit (formsubmit.co) vers hello@lechaim-beer.com.
-// La toute première demande déclenche un e-mail d'activation à valider sur hello@lechaim-beer.com.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@lechaim-beer.com';
+// Formulaire activé le 24/11 : l'identifiant FormSubmit remplace l'adresse e-mail en clair.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/18d1fe54ee0a46395e8c0177af6a25c5';
 document.querySelectorAll('[data-send-form]').forEach(form => {
   const err = form.querySelector('.mform__error');
   const status = form.querySelector('.mform__status');
