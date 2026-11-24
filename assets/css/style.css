@@ -1068,3 +1068,24 @@ a.shelf__item:hover .bottle { transform: translateY(-4px); }
 /* Mentions légales : vagues retirées du bandeau, étoile hors du titre en mobile */
 .hero__ribbons--page { display: none; }
 @media (max-width: 760px) { .page-hero__star { display: none; } }
+
+/* ===== Corrections du 24/11 (2e série) ===== */
+/* Nos bières : le bloc IPA a exactement la largeur de la bouteille, le nom est centré dessus */
+.ipa-bottle--tile { width: auto !important; height: 86%; aspect-ratio: 420 / 860; }
+.tile__visual .ipa-bottle--tile img { width: 100%; height: 100%; }
+/* Accueil : la vague bleue « Une offre pensée pour les pros » recouvre le bas de la photo */
+@media (min-width: 761px) { .home-pros { margin-top: 0; } }
+/* Mobile : aucun débordement horizontal, y compris sur iPhone (champ date natif, formes décoratives) */
+html, body { overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+.mform label, .mform input { min-width: 0; max-width: 100%; }
+.mform input[type="date"] { -webkit-appearance: none; appearance: none; display: block; min-height: 48px; }
+@media (max-width: 760px) { .home-beer .blob { left: 0; } }
+/* Formulaires : confirmation d'envoi bien visible */
+.mform[hidden], .mform-done[hidden] { display: none; }
+.mform-done { text-align: center; background: #fffdf8; border: 1.5px solid var(--gold); border-radius: var(--radius); padding: 40px 28px; display: grid; justify-items: center; gap: 10px; outline: none; }
+.mform-done__icon { width: 64px; height: 64px; border-radius: 50%; background: var(--blue); color: var(--cream); display: grid; place-items: center; font: 700 2rem/1 var(--f-ui); margin-bottom: 6px; }
+.mform-done__title { font: 400 clamp(1.8rem, 3vw, 2.4rem)/1.05 var(--f-display); text-transform: uppercase; color: var(--blue); margin: 0; }
+.mform-done__text { color: var(--ink); max-width: 44ch; margin: 0 0 8px; }
+.mform-done__text a { color: var(--blue); font-weight: 600; }
+.mform-done__text a { white-space: nowrap; }
