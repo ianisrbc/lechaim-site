@@ -90,9 +90,10 @@ document.querySelectorAll('[data-pos-search]').forEach(input => {
 });
 
 // Formulaires Professionnels / Événements : ouvrent la messagerie avec la demande pré-remplie
-// Envoi via FormSubmit (formsubmit.co) vers hello@lechaim-beer.com.
-// Formulaire activé le 24/11 : l'identifiant FormSubmit remplace l'adresse e-mail en clair.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/18d1fe54ee0a46395e8c0177af6a25c5';
+// Envoi via Web3Forms (web3forms.com) vers hello@lechaim-beer.com.
+// Une seule clé d'accès sert pour tous les formulaires ; le sujet de l'e-mail indique de quel formulaire il vient.
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const FORM_KEY = '6c8aca4f-448c-4b7e-8b73-2b3ea921eef4';
 document.querySelectorAll('[data-send-form]').forEach(form => {
   const err = form.querySelector('.mform__error');
   const status = form.querySelector('.mform__status');
@@ -106,18 +107,16 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
     if (bad) { bad.focus(); return; }
     const data = Object.fromEntries(fields.map(el => [el.name, el.value.trim()]));
     const who = data['Établissement'] || data['Nom'];
-    const payload = { ...data, _subject: `${form.dataset.subject} – ${who}`, _replyto: data['E-mail'], _template: 'table', _captcha: 'false' };
+    const payload = { access_key: FORM_KEY, subject: `${form.dataset.subject} – ${who}`, from_name: 'Site Lechaim', replyto: data['E-mail'], ...data };
     btn.disabled = true; btn.classList.add('is-sending');
     show('Envoi en cours…');
-    // FormSubmit (service gratuit) répond parfois lentement : on prévient au bout de 6 s, on abandonne au bout de 45 s.
-    const slow = setTimeout(() => show("Envoi en cours… le service de messagerie met un peu plus de temps que d'habitude, merci de patienter."), 6000);
-    const ctrl = new AbortController();
-    const stop = setTimeout(() => ctrl.abort(), 45000);
+    // Filet de sécurité : si la réponse tarde, on prévient au bout de 6 s et on attend sans couper.
+    const slow = setTimeout(() => show("Envoi en cours… merci de patienter quelques secondes."), 6000);
     try {
-      // FormData (et non JSON) : pas de requête préalable CORS, donc un aller-retour réseau de moins.
+      // FormData : pas de requête préalable CORS.
       const body = new FormData();
       Object.entries(payload).forEach(([k, v]) => body.append(k, v));
-      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body, signal: ctrl.signal });
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
       form.reset();
@@ -139,6 +138,6 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
       done.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } catch (_) {
       show("L'envoi n'a pas fonctionné. Écrivez-nous directement à hello@lechaim-beer.com.", true);
-    } finally { clearTimeout(slow); clearTimeout(stop); btn.disabled = false; btn.classList.remove('is-sending'); }
+    } finally { clearTimeout(slow); btn.disabled = false; btn.classList.remove('is-sending'); }
   });
 });
