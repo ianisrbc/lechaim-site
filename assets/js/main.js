@@ -105,7 +105,7 @@ document.querySelectorAll('[data-send-form]').forEach(form => {
     const bad = fields.find(el => !el.checkValidity() || (el.required && !el.value.trim()));
     err.hidden = !bad;
     if (bad) { bad.focus(); return; }
-    const data = Object.fromEntries(fields.map(el => [el.name, el.value.trim()]));
+    const data = Object.fromEntries(fields.map(el => [el.name, el.type === 'checkbox' ? (el.checked ? 'Oui' : 'Non') : el.value.trim()]));
     const who = data['Établissement'] || data['Nom'];
     const payload = { access_key: FORM_KEY, subject: `${form.dataset.subject} – ${who}`, from_name: 'Site Lechaim', replyto: data['E-mail'], ...data };
     btn.disabled = true; btn.classList.add('is-sending');

@@ -1109,3 +1109,28 @@ html, body { overflow-x: hidden; }
 /* ===== Photos définitives (25/11) ===== */
 .bhero__visual img { object-position: 72% 50%; }
 @media (max-width: 860px) { .bhero__visual img { object-position: 76% 50%; } }
+
+/* Qui sommes-nous (Notre histoire) */
+.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.team__member { background: #fffdf8; border: 1px solid var(--sand); border-radius: var(--radius); padding: 28px; text-align: center; }
+.team__portrait { width: 112px; height: 112px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center; background: var(--blue); color: var(--cream); font: 400 3rem/1 var(--f-display); border: 3px solid var(--gold); overflow: hidden; }
+.team__portrait img { width: 100%; height: 100%; object-fit: cover; }
+.team__member h3 { color: var(--blue); margin-bottom: .4em; }
+.team__member h3 span { display: block; margin-top: .35em; font: 700 .78rem/1 var(--f-ui); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.team__member p { margin: 0; }
+/* Case à cocher des formulaires */
+.mform .mform__check { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.mform .mform__check input { width: 20px; height: 20px; flex: none; padding: 0; accent-color: var(--blue); }
+.mform .mform__check span { font: 500 .95rem/1.3 var(--f-ui); color: var(--night); }
+/* Galerie Lucien (Notre histoire) */
+.lucien-gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 40px; aspect-ratio: 2 / 1; max-width: 100%; }
+.lucien-gallery img { width: 100%; height: 100%; min-height: 0; object-fit: cover; border-radius: var(--radius); display: block; }
+.lucien-gallery__main { grid-row: 1 / -1; object-position: 75% 50%; }
+@media (max-width: 640px) {
+  .lucien-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; aspect-ratio: auto; gap: 10px; }
+  .lucien-gallery__main { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 3 / 2; }
+  .lucien-gallery img:not(.lucien-gallery__main) { aspect-ratio: 1; }
+}
+/* Liens vers Lucien hors .prose */
+.bhero__lead a, .team__member p a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.team__member p a { color: var(--blue); }
