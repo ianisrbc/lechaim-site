@@ -28,7 +28,7 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
 - Texte « Nos bières sont servies dans une sélection de bars… » : à confirmer quand les points de vente existeront.
 - IPA : degré, profil et date de sortie.
 - Location de tireuse : tarif, caution, zone de livraison, quantité minimale.
-- `assets/img/provisoire/` : photos extraites des maquettes (tireuse, fût, occasions, table de fête, bouteille du héros pros), basse définition, à remplacer par des photos HD.
+- `assets/img/provisoire/` : photos extraites des maquettes (fût de 30 L), basse définition, à remplacer par des photos HD. Les photos définitives sont dans `assets/img/photos/`.
 - Lien Instagram @lechaim_beer
 - Polices : Bebas Neue (gratuite) en remplacement de Bebas Neue Pro tant que la licence web n'est pas ajoutée
 

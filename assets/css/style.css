@@ -1105,3 +1105,7 @@ html, body { overflow-x: hidden; }
 .faq__item p { margin: 0 0 18px; }
 .faq__item a, .home-find__more a { color: var(--blue); text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .home-find__more { font-size: .95rem; margin-top: 1rem; }
+
+/* ===== Photos définitives (25/11) ===== */
+.bhero__visual img { object-position: 72% 50%; }
+@media (max-width: 860px) { .bhero__visual img { object-position: 76% 50%; } }
