@@ -1131,3 +1131,6 @@ html, body { overflow-x: hidden; }
   .lucien-gallery__main { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 3 / 2; }
   .lucien-gallery img:not(.lucien-gallery__main) { aspect-ratio: 1; }
 }
+/* Liens vers Lucien hors .prose */
+.bhero__lead a, .team__member p a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.team__member p a { color: var(--blue); }
