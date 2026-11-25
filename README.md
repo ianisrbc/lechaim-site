@@ -39,3 +39,13 @@ Les pages sont générées une fois par un script hors dépôt ; chaque fichier 
    - 4 enregistrements A sur `@` : 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
    - CNAME sur `www` : `<compte-github>.github.io`
 4. Dans Settings > Pages, cocher « Enforce HTTPS » une fois le certificat émis.
+
+## Référencement (SEO)
+
+- Chaque page a un `<title>`, une description, une URL canonique, des balises Open Graph et Twitter, et des données structurées JSON-LD (Brewery et WebSite sur l'accueil, Product sur Nos bières, Service et FAQPage sur Événementiel, FAQPage sur Cacherout, fil d'Ariane sur les pages intérieures).
+- Images de partage (1200 × 630) : `assets/img/partage/`.
+- Photos en WebP, avec des noms de fichiers descriptifs, `width`/`height`, `loading="lazy"` sous la ligne de flottaison et `fetchpriority="high"` sur l'image principale.
+- Favicons : `assets/img/favicon.svg`, `assets/img/favicon-96.png`, `favicon.ico`, `apple-touch-icon.png`.
+- `sitemap.xml` (avec images), `robots.txt`, `404.html` (liens absolus, non indexée).
+- Après une modification de texte, mettre à jour `<lastmod>` dans `sitemap.xml`.
+
